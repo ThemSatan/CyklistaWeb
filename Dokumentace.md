@@ -4,7 +4,9 @@
 
 ## Notace
 
-> Téma webu: kočičí útulek
+> __Téma webu: __ Cyklistický závod
+>__ Odkaz na Github repositář: __ https://github.com/ThemSatan/CyklistaWeb/tree/main
+
 
 ### Tabulky a sloupce:
 __1.  'kocka'__ ( 'status', 'jmeno', 'vek', 'vaha', 'plemeno', 'fotografie', 'pohlavi', 'narozeni', 'popis')
