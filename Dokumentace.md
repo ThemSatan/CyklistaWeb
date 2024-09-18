@@ -10,15 +10,23 @@
 
 
 ### Tabulky a sloupce:
-__1.  'kocka'__ ( 'status', 'jmeno', 'vek', 'vaha', 'plemeno', 'fotografie', 'pohlavi', 'narozeni', 'popis')
+__1.  'note'__ ( 'id', 'shortNote', 'longNote')
 
-__2. 'majitel'__ ( 'jmeno', 'vek', 'mesto', 'telefoni_cislo')
+__2. 'note_type'__ ( 'id', 'short', 'note')
 
-__3. 'rasa'__ ( 'nazev' )
+__3. 'parcour_type'__ ( 'id', 'name', 'icon' )
 
-__4. 'mesto'__ ( 'nazev_mesta' )
+__4. 'race'__ ( 'id', 'default_name', 'link', 'country', 'type')
 
-__5. 'adopce'__ ( 'datum_adopce') 
+__5. 'race_type'__ ( 'short', 'name') 
+
+__6. 'race_year'__ ( 'id', 'real_name', 'id_race', 'year, 'start_date', 'end_date', 'uci_tour', 'logo', 'sex', 'category', 'country') 
+
+__7. 'result'__ ( 'id', 'name_link', 'team_link', 'id_stage', 'id_rider', 'id_team', 'time', 'bonification', 'point', 'rank', 'note', 'type_result') 
+
+__8. 'stage'__ ( 'id', 'number', 'date', 'note', 'departure', 'arrival', 'distance', 'parcour_type', 'vertical_meters', 'profile', 'id_race_year', 'link') 
+
+__9. 'uci_tour_type'__ ( 'id', 'name') 
 
 
 ### Popis prvků
