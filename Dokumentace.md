@@ -31,11 +31,11 @@ __9. 'uci_tour_type'__ ( 'id', 'name')
 
 ### Popis prvků
 Popis názvů tabulek, sloupců a ID
-- Česky (bez diakritiky)
-- Singulár (jednotné číslo)
+- Anglicky
+- Singulár
 - Oddělení ID a cizích ID a dvou slovných názvů pomocí hadí notace
 - Malým písmem
-> Např. kocici_utulek | kocka | id_kocka
+> Např. cyclist_name | cyclist | id_cyclist
 
 
 ### Popis názvu proměnných, metod a kontrolerů
@@ -43,7 +43,7 @@ Popis názvů tabulek, sloupců a ID
 - Singulár
 - Oddělení dvou (a více) slovných názvů pomocí velbloudí notace
 - Na začátku malé písmeno
-> Např. login | loginComplete | catController
+> Např. login | loginComplete | cyclistController
 
 
 ### Popis názvu ‚views‘, modelů a tříd
@@ -51,21 +51,21 @@ Popis názvů tabulek, sloupců a ID
 - Singulár
 - Oddělení dvou (a více) slovných názvů pomocí velkého písmena na začátku dalšího slova, bez mezery -> ‚pascal case‘
 - Na začátku velké písmeno
-> Např. MainPage | Cat | Auth
+> Např. MainPage | Cyclist | Auth
 
 
-### Popis názvu obrázků
-- Česky
+### Popis názvu obrázků __(???) -> dodělat__
+- Anglicky
 - Oddělení dvou (a více) slovných názvů pomocí velkého písmena na začátku dalšího slova, bez mezery
 - Na začátku malé písmeno
-> Např. kocka.jpg
+> Např. cyclist.jpg
 
 
 ## Externí nástroje
 
 ### __[Bootstrap](https://getbootstrap.com)__
 
-__Verze knihovny:__ 5.0.2
+__Verze knihovny:__ 5.3.3
 
 __Autor knihovny:__ Mark Otto a Jacob Thornton
 
@@ -74,7 +74,7 @@ __Licence knihovny:__ MIT License
 
 
 ### __[CodeIgniter](https://codeigniter.com)__
-__Verze knihovny:__ 4.5.1
+__Verze knihovny:__ 4.5.5
 
 __Autor knihovny:__ Rick Ellis, EllisLab, Inc. (nyní spravováno CodeIgniter Foundation)
 
@@ -92,17 +92,17 @@ __Licence knihovny:__ SIL OFL 1.1 a MIT License
 ### __[Composer](https://getcomposer.org)__
 __Název knihovny:__ Composer
 
-__Verze knihovny:__ 2.6.2
+__Verze knihovny:__ 2.7.8
 
 __Autor knihovny:__ Nils Adermann, Jordi Boggiano
 
 __Licence knihovny:__ MIT License
 
 
-## Rozdělení práce
+## Rozdělení práce - upravt !!!
 
 _Klára Adámková_
--	Databáze – přidány jména koček a doplněny obrázky
+-	Založení projektu
 -	Tabulky - editace
 -	Přihlášení a registrace
 -	Vzhledové upravení webu (CSS) a stránkování
@@ -110,9 +110,8 @@ _Klára Adámková_
 -	Agregační funkce a SQL Joins
 
 _Karla Šoustková_
--	Dokumentace a notace
--	ER diagram
--	Databáze
+-	Dokumentace
+-	Vlajky
 -	Tabulky - přidávání, mazání, soft deletes
 -	Zobrazení - karty
 -	Modální okno a alerty
