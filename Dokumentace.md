@@ -99,7 +99,7 @@ __Autor knihovny:__ Nils Adermann, Jordi Boggiano
 __Licence knihovny:__ MIT License
 
 
-## Rozdělení práce - upravt !!!
+## Rozdělení práce - upravit !!!
 
 _Klára Adámková_
 -	Založení projektu
@@ -116,7 +116,7 @@ _Karla Šoustková_
 -	Zobrazení - karty
 -	Modální okno a alerty
 
-## Popis jednotlivých metod a proměnných
+## Popis jednotlivých metod a proměnných - upravit !!!
 ### Kontrolery
 
 __1. 'MainController'__
