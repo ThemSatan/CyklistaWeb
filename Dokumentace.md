@@ -4,8 +4,8 @@
 
 ## Notace
 
-> __Téma webu: __ Cyklistický závod
->__ Odkaz na Github repositář: __ https://github.com/ThemSatan/CyklistaWeb/tree/main
+> Téma webu: Cyklistický závod
+> Odkaz na Github repositář: https://github.com/ThemSatan/CyklistaWeb/tree/main
 
 
 ### Tabulky a sloupce:
