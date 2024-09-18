@@ -1,0 +1,53 @@
+{
+  "name": "flag-icon",
+  "version": "2.5.0",
+  "description": "Polymer Web Component for SVG icons of country, state, province and other flags",
+  "scripts": {
+    "start": "polymer serve --npm"
+  },
+  "keywords": [
+    "web-component",
+    "web-components",
+    "polymer",
+    "geography",
+    "countries",
+    "world",
+    "state",
+    "provincial",
+    "territory",
+    "icon",
+    "svg",
+    "flag",
+    "maritime",
+    "nascar",
+    "indycar",
+    "racing",
+    "australia",
+    "brazil",
+    "canada",
+    "germany",
+    "spain",
+    "russia",
+    "united states"
+  ],
+  "homepage": "https://github.com/stevenrskelton/flag-icon",
+  "main": "flag-icon.js",
+  "contributors": [
+    "Steven Skelton",
+    "Roman Kaufmann"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@polymer/polymer": "^3.0.0",
+    "@polymer/iron-image": "^3.0.0-pre.18",
+    "@polymer/iron-flex-layout": "^3.0.0-pre.18"
+  },
+  "devDependencies": {
+    "@webcomponents/webcomponentsjs": "^2.0.0",
+    "wct-browser-legacy": "^1.0.1",
+    "@polymer/iron-component-page": "^3.0.0-pre.18",
+    "@polymer/iron-demo-helpers": "^3.0.0-pre.18",
+    "@polymer/paper-input": "^3.0.0-pre.18",
+    "@polymer/paper-card": "^3.0.0-pre.18"
+  }
+}
