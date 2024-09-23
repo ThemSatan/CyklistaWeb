@@ -9,6 +9,7 @@
 
     <?php
 
+
     foreach($array as $row){
 
     ?>
@@ -17,7 +18,8 @@
         <div class='text-center'>
             <?php
                 echo "<div class='container'>
-                        <h3>".$row->country."</h3>
+                        <h3>
+                        <span class='fi fi-".$row->country_id."'></span></h3>
                     </div>";
             ?>
         </div>
