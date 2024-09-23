@@ -13,17 +13,17 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarColor02">
             <ul class="navbar-nav me-auto">
-            <p class="navbar-title">K&K Produkce</p>
+            <p class="navbar-title">Cy<span style="color:black;">KK</span>ling</p>
             <div class="dropdown">
                 
                 <button data-mdb-button-init data-mdb-ripple-init data-mdb-dropdown-init class="dropbtn" type="button" id="dropdownMenuButton" data-mdb-toggle="dropdown" aria-expanded="false">
                     <i class="fa-solid fa-caret-right"></i>
-                        Naše Kočky
+                        Menu
                     <i class="fa-solid fa-caret-left"></i>    
                 </button>
                 
                 <div class="dropdown-content" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="<?=base_url('home')?>"><i class="fa-solid fa-caret-right"></i> Všechny Kočky</a>
+                    <a class="dropdown-item" href="<?=base_url('home')?>"><i class="fa-solid fa-caret-right"></i> nazev page</a>
                 </div>
             </div>
                 <li class="nav-item">

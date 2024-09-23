@@ -3,23 +3,30 @@
 
 <p>praze?! to snad stihnu</p>
 
-<?php
 
-foreach($array as $row){
+<div class='offset-1 profiles-group'>
+    <div class='row pt-2'>
 
-?>
-    <br><div class='card'>
+    <?php
+
+    foreach($array as $row){
+
+    ?>
+    <br>
+    <div class='card'>
         <div class='text-center'>
             <?php
                 echo "<div class='container'>
-                        <h3>".$row->default_name."</h3>
+                        <h3>".$row->country."</h3>
                     </div>";
             ?>
         </div>
     </div>
     
-<?php
-}
+    <?php
+    }
+echo "</div>
+</div>";
 
 ?>
 

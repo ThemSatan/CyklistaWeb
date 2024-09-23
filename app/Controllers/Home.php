@@ -17,7 +17,7 @@ class Home extends BaseController
     function index()
     {
         $data['title']="Naše Cyklistika";
-        $data['array']= $this->rModel->orderBy("id","asc")->findAll();
+        $data['array']= $this->rModel->orderBy("id","asc")->array_unique($array)->findAll();
 
         return view('home',$data);
     }
