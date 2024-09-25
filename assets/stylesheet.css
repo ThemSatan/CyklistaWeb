@@ -3,6 +3,14 @@
 *{
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   font-style: normal;
+  text-decoration: none;
+}
+
+a{
+  text-decoration: none;
+  color: #271b18;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
 .debug-bar-dinlineBlock{
@@ -634,6 +642,23 @@ th{
 
 ::-webkit-scrollbar-thumb:hover {
   background: #62442e; 
+}
+
+/*-----*/
+
+/*MISC*/
+
+.flag {
+  font-size: 25px;
+  transition: 0.3s;
+}
+
+.races:hover {
+  text-decoration: none;
+  color: #271b18;
+  font-weight: bold;
+  font-size: larger;
+  transition: 0.3s;
 }
 
 /*-----*/
