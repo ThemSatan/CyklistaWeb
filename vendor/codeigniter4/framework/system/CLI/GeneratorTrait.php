@@ -96,14 +96,12 @@ trait GeneratorTrait
      *
      * @internal
      *
-     * @var array<int|string, string|null>
+     * @var array
      */
     private $params = [];
 
     /**
      * Execute the command.
-     *
-     * @param array<int|string, string|null> $params
      *
      * @deprecated use generateClass() instead
      */
@@ -114,8 +112,6 @@ trait GeneratorTrait
 
     /**
      * Generates a class file from an existing template.
-     *
-     * @param array<int|string, string|null> $params
      */
     protected function generateClass(array $params): void
     {
@@ -138,8 +134,7 @@ trait GeneratorTrait
     /**
      * Generate a view file from an existing template.
      *
-     * @param string                         $view   namespaced view name that is generated
-     * @param array<int|string, string|null> $params
+     * @param string $view namespaced view name that is generated
      */
     protected function generateView(string $view, array $params): void
     {
@@ -325,7 +320,7 @@ trait GeneratorTrait
             implode(
                 '\\',
                 array_map(
-                    pascalize(...),
+                    'pascalize',
                     explode('\\', str_replace('/', '\\', trim($class)))
                 )
             ),
@@ -336,8 +331,6 @@ trait GeneratorTrait
     /**
      * Gets the generator view as defined in the `Config\Generators::$views`,
      * with fallback to `$template` when the defined view does not exist.
-     *
-     * @param array<string, mixed> $data
      */
     protected function renderTemplate(array $data = []): string
     {
@@ -359,10 +352,7 @@ trait GeneratorTrait
     /**
      * Performs pseudo-variables contained within view file.
      *
-     * @param string                          $class   namespaced classname or namespaced view.
-     * @param list<string>                    $search
-     * @param list<string>                    $replace
-     * @param array<string, bool|string|null> $data
+     * @param string $class namespaced classname or namespaced view.
      *
      * @return string generated file content
      */
@@ -516,7 +506,7 @@ trait GeneratorTrait
      * Gets a single command-line option. Returns TRUE if the option exists,
      * but doesn't have a value, and is simply acting as a flag.
      */
-    protected function getOption(string $name): bool|string|null
+    protected function getOption(string $name): string|bool|null
     {
         if (! array_key_exists($name, $this->params)) {
             return CLI::getOption($name);

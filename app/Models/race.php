@@ -7,13 +7,13 @@
         protected $table = "race";
         protected $returnType = "object";
         protected $primaryKey = "id";
-        /**protected $autoIncrement = "true";
+        protected $autoIncrement = "true";
         protected $useSoftDeletes = "true";
-        protected $allowedFields = ['status', 'jmeno', 'vek', 'vaha', 'plemeno_id', 'pohlavi', 'narozeni', 'fotografie', 'popis'];
-        protected $deletedField = "vymazano";
+        protected $allowedFields = ['default_name','link','country','type'];
+        protected $deletedField = "deleted";
         protected $dateFormat = "int";
         protected $useTimeStamps = "true";
-        protected $createdField = "vytvoreno";
-        protected $updatedField = "upraveno";**/
+        protected $createdField = "created";
+        protected $updatedField = "updated";
     }
 ?>

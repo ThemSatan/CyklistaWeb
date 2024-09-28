@@ -670,7 +670,7 @@ trait ResponseTrait
 
         foreach ($this->cookieStore->display() as $cookie) {
             if ($cookie->isSecure() && ! $request->isSecure()) {
-                throw SecurityException::forInsecureCookie();
+                throw SecurityException::forDisallowedAction();
             }
 
             $name    = $cookie->getPrefixedName();

@@ -124,8 +124,6 @@ class GenerateKey extends BaseCommand
 
     /**
      * Sets the new encryption key in your .env file.
-     *
-     * @param array<int|string, string|null> $params
      */
     protected function setNewEncryptionKey(string $key, array $params): bool
     {
@@ -141,8 +139,6 @@ class GenerateKey extends BaseCommand
 
     /**
      * Checks whether to overwrite existing encryption key.
-     *
-     * @param array<int|string, string|null> $params
      */
     protected function confirmOverwrite(array $params): bool
     {

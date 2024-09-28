@@ -27,7 +27,6 @@ final class AutoRouteCollector
      * @param string             $namespace            namespace to search
      * @param list<class-string> $protectedControllers List of controllers in Defined
      *                                                 Routes that should not be accessed via Auto-Routing.
-     * @param list<string>       $httpMethods
      * @param string             $prefix               URI prefix for Module Routing
      */
     public function __construct(
@@ -92,13 +91,6 @@ final class AutoRouteCollector
         return $tbody;
     }
 
-    /**
-     * Adding Filters
-     *
-     * @param list<array<string, array|string>> $routes
-     *
-     * @return list<array<string, array|string>>
-     */
     private function addFilters($routes)
     {
         $filterCollector = new FilterCollector(true);
@@ -125,8 +117,8 @@ final class AutoRouteCollector
             $filters['before'] = array_intersect($filtersLongest['before'], $filtersShortest['before']);
             $filters['after']  = array_intersect($filtersLongest['after'], $filtersShortest['after']);
 
-            $route['before'] = implode(' ', array_map(class_basename(...), $filters['before']));
-            $route['after']  = implode(' ', array_map(class_basename(...), $filters['after']));
+            $route['before'] = implode(' ', array_map('class_basename', $filters['before']));
+            $route['after']  = implode(' ', array_map('class_basename', $filters['after']));
         }
 
         return $routes;

@@ -15,7 +15,6 @@ namespace CodeIgniter\Commands\Database;
 
 use CodeIgniter\CLI\BaseCommand;
 use CodeIgniter\CLI\CLI;
-use CodeIgniter\Database\MigrationRunner;
 use Throwable;
 
 /**
@@ -79,23 +78,10 @@ class MigrateRollback extends BaseCommand
             // @codeCoverageIgnoreEnd
         }
 
-        /** @var MigrationRunner $runner */
         $runner = service('migrations');
 
         try {
             $batch = $params['b'] ?? CLI::getOption('b') ?? $runner->getLastBatch() - 1;
-
-            if (is_string($batch)) {
-                if (! ctype_digit($batch)) {
-                    CLI::error('Invalid batch number: ' . $batch, 'light_gray', 'red');
-                    CLI::newLine();
-
-                    return EXIT_ERROR;
-                }
-
-                $batch = (int) $batch;
-            }
-
             CLI::write(lang('Migrations.rollingBack') . ' ' . $batch, 'yellow');
 
             if (! $runner->regress($batch)) {

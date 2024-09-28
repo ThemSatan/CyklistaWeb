@@ -38,11 +38,6 @@ class MockConnection extends BaseConnection
     public $database;
     public $lastQuery;
 
-    /**
-     * @param mixed $return
-     *
-     * @return $this
-     */
     public function shouldReturn(string $method, $return)
     {
         $this->returnValues[$method] = $return;
@@ -132,13 +127,13 @@ class MockConnection extends BaseConnection
     /**
      * Select a specific database table to use.
      *
-     * @return bool
+     * @return mixed
      */
     public function setDatabase(string $databaseName)
     {
         $this->database = $databaseName;
 
-        return true;
+        return $this;
     }
 
     /**
@@ -225,8 +220,6 @@ class MockConnection extends BaseConnection
 
     /**
      * Close the connection.
-     *
-     * @return void
      */
     protected function _close()
     {

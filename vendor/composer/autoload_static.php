@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit657ac079313fab046eb8c29fe1d6992b
+class ComposerStaticInitc953895d8a65f9411059031dd0d1f3ea
 {
     public static $files = array (
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
@@ -13,14 +13,6 @@ class ComposerStaticInit657ac079313fab046eb8c29fe1d6992b
     );
 
     public static $prefixLengthsPsr4 = array (
-        'o' => 
-        array (
-            'org\\bovigo\\vfs\\' => 15,
-        ),
-        'b' => 
-        array (
-            'bovigo\\vfs\\' => 11,
-        ),
         'T' => 
         array (
             'Tests\\Support\\' => 14,
@@ -49,7 +41,6 @@ class ComposerStaticInit657ac079313fab046eb8c29fe1d6992b
         ),
         'C' => 
         array (
-            'Config\\' => 7,
             'CodeIgniter\\' => 12,
         ),
         'A' => 
@@ -59,14 +50,6 @@ class ComposerStaticInit657ac079313fab046eb8c29fe1d6992b
     );
 
     public static $prefixDirsPsr4 = array (
-        'org\\bovigo\\vfs\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/mikey179/vfsstream/org/bovigo/vfs',
-        ),
-        'bovigo\\vfs\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/mikey179/vfsstream/src',
-        ),
         'Tests\\Support\\' => 
         array (
             0 => __DIR__ . '/../..' . '/tests/_support',
@@ -99,10 +82,6 @@ class ComposerStaticInit657ac079313fab046eb8c29fe1d6992b
         array (
             0 => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy',
         ),
-        'Config\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/app/Config',
-        ),
         'CodeIgniter\\' => 
         array (
             0 => __DIR__ . '/..' . '/codeigniter4/framework/system',
@@ -113,9 +92,24 @@ class ComposerStaticInit657ac079313fab046eb8c29fe1d6992b
         ),
     );
 
+    public static $prefixesPsr0 = array (
+        'o' => 
+        array (
+            'org\\bovigo\\vfs\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/mikey179/vfsstream/src/main/php',
+            ),
+        ),
+    );
+
     public static $classMap = array (
+        'App\\Controllers\\Auth' => __DIR__ . '/../..' . '/app/Controllers/Auth.php',
         'App\\Controllers\\BaseController' => __DIR__ . '/../..' . '/app/Controllers/BaseController.php',
         'App\\Controllers\\Home' => __DIR__ . '/../..' . '/app/Controllers/Home.php',
+        'App\\Controllers\\MainController' => __DIR__ . '/../..' . '/app/Controllers/MainController.php',
+        'App\\Models\\BreedModel' => __DIR__ . '/../..' . '/app/Models/BreedModel.php',
+        'App\\Models\\CatModel' => __DIR__ . '/../..' . '/app/Models/CatModel.php',
+        'App\\Models\\UserModel' => __DIR__ . '/../..' . '/app/Models/UserModel.php',
         'CodeIgniter\\API\\ResponseTrait' => __DIR__ . '/..' . '/codeigniter4/framework/system/API/ResponseTrait.php',
         'CodeIgniter\\Autoloader\\Autoloader' => __DIR__ . '/..' . '/codeigniter4/framework/system/Autoloader/Autoloader.php',
         'CodeIgniter\\Autoloader\\FileLocator' => __DIR__ . '/..' . '/codeigniter4/framework/system/Autoloader/FileLocator.php',
@@ -512,42 +506,6 @@ class ComposerStaticInit657ac079313fab046eb8c29fe1d6992b
         'CodeIgniter\\View\\ViewDecoratorInterface' => __DIR__ . '/..' . '/codeigniter4/framework/system/View/ViewDecoratorInterface.php',
         'CodeIgniter\\View\\ViewDecoratorTrait' => __DIR__ . '/..' . '/codeigniter4/framework/system/View/ViewDecoratorTrait.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
-        'Config\\App' => __DIR__ . '/../..' . '/app/Config/App.php',
-        'Config\\Autoload' => __DIR__ . '/../..' . '/app/Config/Autoload.php',
-        'Config\\CURLRequest' => __DIR__ . '/../..' . '/app/Config/CURLRequest.php',
-        'Config\\Cache' => __DIR__ . '/../..' . '/app/Config/Cache.php',
-        'Config\\ContentSecurityPolicy' => __DIR__ . '/../..' . '/app/Config/ContentSecurityPolicy.php',
-        'Config\\Cookie' => __DIR__ . '/../..' . '/app/Config/Cookie.php',
-        'Config\\Cors' => __DIR__ . '/../..' . '/app/Config/Cors.php',
-        'Config\\Database' => __DIR__ . '/../..' . '/app/Config/Database.php',
-        'Config\\DocTypes' => __DIR__ . '/../..' . '/app/Config/DocTypes.php',
-        'Config\\Email' => __DIR__ . '/../..' . '/app/Config/Email.php',
-        'Config\\Encryption' => __DIR__ . '/../..' . '/app/Config/Encryption.php',
-        'Config\\Exceptions' => __DIR__ . '/../..' . '/app/Config/Exceptions.php',
-        'Config\\Feature' => __DIR__ . '/../..' . '/app/Config/Feature.php',
-        'Config\\Filters' => __DIR__ . '/../..' . '/app/Config/Filters.php',
-        'Config\\ForeignCharacters' => __DIR__ . '/../..' . '/app/Config/ForeignCharacters.php',
-        'Config\\Format' => __DIR__ . '/../..' . '/app/Config/Format.php',
-        'Config\\Generators' => __DIR__ . '/../..' . '/app/Config/Generators.php',
-        'Config\\Honeypot' => __DIR__ . '/../..' . '/app/Config/Honeypot.php',
-        'Config\\Images' => __DIR__ . '/../..' . '/app/Config/Images.php',
-        'Config\\Kint' => __DIR__ . '/../..' . '/app/Config/Kint.php',
-        'Config\\Logger' => __DIR__ . '/../..' . '/app/Config/Logger.php',
-        'Config\\Migrations' => __DIR__ . '/../..' . '/app/Config/Migrations.php',
-        'Config\\Mimes' => __DIR__ . '/../..' . '/app/Config/Mimes.php',
-        'Config\\Modules' => __DIR__ . '/../..' . '/app/Config/Modules.php',
-        'Config\\Optimize' => __DIR__ . '/../..' . '/app/Config/Optimize.php',
-        'Config\\Pager' => __DIR__ . '/../..' . '/app/Config/Pager.php',
-        'Config\\Paths' => __DIR__ . '/../..' . '/app/Config/Paths.php',
-        'Config\\Publisher' => __DIR__ . '/../..' . '/app/Config/Publisher.php',
-        'Config\\Routing' => __DIR__ . '/../..' . '/app/Config/Routing.php',
-        'Config\\Security' => __DIR__ . '/../..' . '/app/Config/Security.php',
-        'Config\\Services' => __DIR__ . '/../..' . '/app/Config/Services.php',
-        'Config\\Session' => __DIR__ . '/../..' . '/app/Config/Session.php',
-        'Config\\Toolbar' => __DIR__ . '/../..' . '/app/Config/Toolbar.php',
-        'Config\\UserAgents' => __DIR__ . '/../..' . '/app/Config/UserAgents.php',
-        'Config\\Validation' => __DIR__ . '/../..' . '/app/Config/Validation.php',
-        'Config\\View' => __DIR__ . '/../..' . '/app/Config/View.php',
         'DeepCopy\\DeepCopy' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',
         'DeepCopy\\Exception\\CloneException' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Exception/CloneException.php',
         'DeepCopy\\Exception\\PropertyException' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Exception/PropertyException.php',
@@ -1439,11 +1397,12 @@ class ComposerStaticInit657ac079313fab046eb8c29fe1d6992b
         'PHPUnit\\Framework\\MockObject\\Builder\\MethodNameMatch' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Runtime/Builder/MethodNameMatch.php',
         'PHPUnit\\Framework\\MockObject\\Builder\\ParametersMatch' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Runtime/Builder/ParametersMatch.php',
         'PHPUnit\\Framework\\MockObject\\Builder\\Stub' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Runtime/Builder/Stub.php',
+        'PHPUnit\\Framework\\MockObject\\CannotUseAddMethodsException' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Exception/CannotUseAddMethodsException.php',
         'PHPUnit\\Framework\\MockObject\\CannotUseOnlyMethodsException' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Exception/CannotUseOnlyMethodsException.php',
         'PHPUnit\\Framework\\MockObject\\ConfigurableMethod' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/ConfigurableMethod.php',
         'PHPUnit\\Framework\\MockObject\\DoubledCloneMethod' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Runtime/Api/DoubledCloneMethod.php',
         'PHPUnit\\Framework\\MockObject\\Exception' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Exception/Exception.php',
-        'PHPUnit\\Framework\\MockObject\\Generator\\CannotUseAddMethodsException' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Generator/Exception/CannotUseAddMethodsException.php',
+        'PHPUnit\\Framework\\MockObject\\Generator\\ClassAlreadyExistsException' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Generator/Exception/ClassAlreadyExistsException.php',
         'PHPUnit\\Framework\\MockObject\\Generator\\ClassIsEnumerationException' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Generator/Exception/ClassIsEnumerationException.php',
         'PHPUnit\\Framework\\MockObject\\Generator\\ClassIsFinalException' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Generator/Exception/ClassIsFinalException.php',
         'PHPUnit\\Framework\\MockObject\\Generator\\ClassIsReadonlyException' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Generator/Exception/ClassIsReadonlyException.php',
@@ -1456,7 +1415,6 @@ class ComposerStaticInit657ac079313fab046eb8c29fe1d6992b
         'PHPUnit\\Framework\\MockObject\\Generator\\MockMethodSet' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Generator/MockMethodSet.php',
         'PHPUnit\\Framework\\MockObject\\Generator\\MockTrait' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Generator/MockTrait.php',
         'PHPUnit\\Framework\\MockObject\\Generator\\MockType' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Generator/MockType.php',
-        'PHPUnit\\Framework\\MockObject\\Generator\\NameAlreadyInUseException' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Generator/Exception/NameAlreadyInUseException.php',
         'PHPUnit\\Framework\\MockObject\\Generator\\OriginalConstructorInvocationRequiredException' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Generator/Exception/OriginalConstructorInvocationRequiredException.php',
         'PHPUnit\\Framework\\MockObject\\Generator\\ReflectionException' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Generator/Exception/ReflectionException.php',
         'PHPUnit\\Framework\\MockObject\\Generator\\RuntimeException' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Generator/Exception/RuntimeException.php',
@@ -1482,7 +1440,6 @@ class ComposerStaticInit657ac079313fab046eb8c29fe1d6992b
         'PHPUnit\\Framework\\MockObject\\MockObjectApi' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Runtime/Api/MockObjectApi.php',
         'PHPUnit\\Framework\\MockObject\\MockObjectInternal' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Runtime/Interface/MockObjectInternal.php',
         'PHPUnit\\Framework\\MockObject\\NeverReturningMethodException' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Exception/NeverReturningMethodException.php',
-        'PHPUnit\\Framework\\MockObject\\NoMoreReturnValuesConfiguredException' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Exception/NoMoreReturnValuesConfiguredException.php',
         'PHPUnit\\Framework\\MockObject\\ProxiedCloneMethod' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Runtime/Api/ProxiedCloneMethod.php',
         'PHPUnit\\Framework\\MockObject\\ReflectionException' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Exception/ReflectionException.php',
         'PHPUnit\\Framework\\MockObject\\ReturnValueGenerator' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/MockObject/Runtime/ReturnValueGenerator.php',
@@ -1684,7 +1641,7 @@ class ComposerStaticInit657ac079313fab046eb8c29fe1d6992b
         'PHPUnit\\Runner\\ClassDoesNotExtendTestCaseException' => __DIR__ . '/..' . '/phpunit/phpunit/src/Runner/Exception/ClassDoesNotExtendTestCaseException.php',
         'PHPUnit\\Runner\\ClassIsAbstractException' => __DIR__ . '/..' . '/phpunit/phpunit/src/Runner/Exception/ClassIsAbstractException.php',
         'PHPUnit\\Runner\\CodeCoverage' => __DIR__ . '/..' . '/phpunit/phpunit/src/Runner/CodeCoverage.php',
-        'PHPUnit\\Runner\\DirectoryDoesNotExistException' => __DIR__ . '/..' . '/phpunit/phpunit/src/Runner/Exception/DirectoryDoesNotExistException.php',
+        'PHPUnit\\Runner\\DirectoryCannotBeCreatedException' => __DIR__ . '/..' . '/phpunit/phpunit/src/Runner/Exception/DirectoryCannotBeCreatedException.php',
         'PHPUnit\\Runner\\ErrorException' => __DIR__ . '/..' . '/phpunit/phpunit/src/Runner/Exception/ErrorException.php',
         'PHPUnit\\Runner\\ErrorHandler' => __DIR__ . '/..' . '/phpunit/phpunit/src/Runner/ErrorHandler.php',
         'PHPUnit\\Runner\\Exception' => __DIR__ . '/..' . '/phpunit/phpunit/src/Runner/Exception/Exception.php',
@@ -1761,7 +1718,6 @@ class ComposerStaticInit657ac079313fab046eb8c29fe1d6992b
         'PHPUnit\\TestRunner\\TestResult\\TestTriggeredPhpunitWarningSubscriber' => __DIR__ . '/..' . '/phpunit/phpunit/src/Runner/TestResult/Subscriber/TestTriggeredPhpunitWarningSubscriber.php',
         'PHPUnit\\TestRunner\\TestResult\\TestTriggeredWarningSubscriber' => __DIR__ . '/..' . '/phpunit/phpunit/src/Runner/TestResult/Subscriber/TestTriggeredWarningSubscriber.php',
         'PHPUnit\\TextUI\\Application' => __DIR__ . '/..' . '/phpunit/phpunit/src/TextUI/Application.php',
-        'PHPUnit\\TextUI\\CannotOpenSocketException' => __DIR__ . '/..' . '/phpunit/phpunit/src/TextUI/Exception/CannotOpenSocketException.php',
         'PHPUnit\\TextUI\\CliArguments\\Builder' => __DIR__ . '/..' . '/phpunit/phpunit/src/TextUI/Configuration/Cli/Builder.php',
         'PHPUnit\\TextUI\\CliArguments\\Configuration' => __DIR__ . '/..' . '/phpunit/phpunit/src/TextUI/Configuration/Cli/Configuration.php',
         'PHPUnit\\TextUI\\CliArguments\\Exception' => __DIR__ . '/..' . '/phpunit/phpunit/src/TextUI/Configuration/Cli/Exception.php',
@@ -1838,6 +1794,7 @@ class ComposerStaticInit657ac079313fab046eb8c29fe1d6992b
         'PHPUnit\\TextUI\\Configuration\\Variable' => __DIR__ . '/..' . '/phpunit/phpunit/src/TextUI/Configuration/Value/Variable.php',
         'PHPUnit\\TextUI\\Configuration\\VariableCollection' => __DIR__ . '/..' . '/phpunit/phpunit/src/TextUI/Configuration/Value/VariableCollection.php',
         'PHPUnit\\TextUI\\Configuration\\VariableCollectionIterator' => __DIR__ . '/..' . '/phpunit/phpunit/src/TextUI/Configuration/Value/VariableCollectionIterator.php',
+        'PHPUnit\\TextUI\\DirectoryDoesNotExistException' => __DIR__ . '/..' . '/phpunit/phpunit/src/TextUI/Exception/DirectoryDoesNotExistException.php',
         'PHPUnit\\TextUI\\Exception' => __DIR__ . '/..' . '/phpunit/phpunit/src/TextUI/Exception/Exception.php',
         'PHPUnit\\TextUI\\ExtensionsNotConfiguredException' => __DIR__ . '/..' . '/phpunit/phpunit/src/TextUI/Exception/ExtensionsNotConfiguredException.php',
         'PHPUnit\\TextUI\\Help' => __DIR__ . '/..' . '/phpunit/phpunit/src/TextUI/Help.php',
@@ -2077,14 +2034,12 @@ class ComposerStaticInit657ac079313fab046eb8c29fe1d6992b
         'PhpParser\\JsonDecoder' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/JsonDecoder.php',
         'PhpParser\\Lexer' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Lexer.php',
         'PhpParser\\Lexer\\Emulative' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Lexer/Emulative.php',
-        'PhpParser\\Lexer\\TokenEmulator\\AsymmetricVisibilityTokenEmulator' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/AsymmetricVisibilityTokenEmulator.php',
         'PhpParser\\Lexer\\TokenEmulator\\AttributeEmulator' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/AttributeEmulator.php',
         'PhpParser\\Lexer\\TokenEmulator\\EnumTokenEmulator' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/EnumTokenEmulator.php',
         'PhpParser\\Lexer\\TokenEmulator\\ExplicitOctalEmulator' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/ExplicitOctalEmulator.php',
         'PhpParser\\Lexer\\TokenEmulator\\KeywordEmulator' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/KeywordEmulator.php',
         'PhpParser\\Lexer\\TokenEmulator\\MatchTokenEmulator' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/MatchTokenEmulator.php',
         'PhpParser\\Lexer\\TokenEmulator\\NullsafeTokenEmulator' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/NullsafeTokenEmulator.php',
-        'PhpParser\\Lexer\\TokenEmulator\\PropertyTokenEmulator' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/PropertyTokenEmulator.php',
         'PhpParser\\Lexer\\TokenEmulator\\ReadonlyFunctionTokenEmulator' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/ReadonlyFunctionTokenEmulator.php',
         'PhpParser\\Lexer\\TokenEmulator\\ReadonlyTokenEmulator' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/ReadonlyTokenEmulator.php',
         'PhpParser\\Lexer\\TokenEmulator\\ReverseEmulator' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/ReverseEmulator.php',
@@ -2218,7 +2173,6 @@ class ComposerStaticInit657ac079313fab046eb8c29fe1d6992b
         'PhpParser\\Node\\Name\\Relative' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Name/Relative.php',
         'PhpParser\\Node\\NullableType' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/NullableType.php',
         'PhpParser\\Node\\Param' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Param.php',
-        'PhpParser\\Node\\PropertyHook' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/PropertyHook.php',
         'PhpParser\\Node\\PropertyItem' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/PropertyItem.php',
         'PhpParser\\Node\\Scalar' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Scalar.php',
         'PhpParser\\Node\\Scalar\\Float_' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Scalar/Float_.php',
@@ -2232,7 +2186,6 @@ class ComposerStaticInit657ac079313fab046eb8c29fe1d6992b
         'PhpParser\\Node\\Scalar\\MagicConst\\Line' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Scalar/MagicConst/Line.php',
         'PhpParser\\Node\\Scalar\\MagicConst\\Method' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Scalar/MagicConst/Method.php',
         'PhpParser\\Node\\Scalar\\MagicConst\\Namespace_' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Scalar/MagicConst/Namespace_.php',
-        'PhpParser\\Node\\Scalar\\MagicConst\\Property' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Scalar/MagicConst/Property.php',
         'PhpParser\\Node\\Scalar\\MagicConst\\Trait_' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Scalar/MagicConst/Trait_.php',
         'PhpParser\\Node\\Scalar\\String_' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Scalar/String_.php',
         'PhpParser\\Node\\StaticVar' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/StaticVar.php',
@@ -2521,54 +2474,35 @@ class ComposerStaticInit657ac079313fab046eb8c29fe1d6992b
         'TheSeer\\Tokenizer\\TokenCollectionException' => __DIR__ . '/..' . '/theseer/tokenizer/src/TokenCollectionException.php',
         'TheSeer\\Tokenizer\\Tokenizer' => __DIR__ . '/..' . '/theseer/tokenizer/src/Tokenizer.php',
         'TheSeer\\Tokenizer\\XMLSerializer' => __DIR__ . '/..' . '/theseer/tokenizer/src/XMLSerializer.php',
-        'bovigo\\vfs\\BasicFile' => __DIR__ . '/..' . '/mikey179/vfsstream/src/BasicFile.php',
-        'bovigo\\vfs\\DotDirectory' => __DIR__ . '/..' . '/mikey179/vfsstream/src/DotDirectory.php',
-        'bovigo\\vfs\\Quota' => __DIR__ . '/..' . '/mikey179/vfsstream/src/Quota.php',
-        'bovigo\\vfs\\StreamWrapper' => __DIR__ . '/..' . '/mikey179/vfsstream/src/StreamWrapper.php',
-        'bovigo\\vfs\\content\\FileContent' => __DIR__ . '/..' . '/mikey179/vfsstream/src/content/FileContent.php',
-        'bovigo\\vfs\\content\\LargeFileContent' => __DIR__ . '/..' . '/mikey179/vfsstream/src/content/LargeFileContent.php',
-        'bovigo\\vfs\\content\\SeekableFileContent' => __DIR__ . '/..' . '/mikey179/vfsstream/src/content/SeekableFileContent.php',
-        'bovigo\\vfs\\content\\StringBasedFileContent' => __DIR__ . '/..' . '/mikey179/vfsstream/src/content/StringBasedFileContent.php',
-        'bovigo\\vfs\\vfsBlock' => __DIR__ . '/..' . '/mikey179/vfsstream/src/vfsBlock.php',
-        'bovigo\\vfs\\vfsDirectory' => __DIR__ . '/..' . '/mikey179/vfsstream/src/vfsDirectory.php',
-        'bovigo\\vfs\\vfsDirectoryIterator' => __DIR__ . '/..' . '/mikey179/vfsstream/src/vfsDirectoryIterator.php',
-        'bovigo\\vfs\\vfsFile' => __DIR__ . '/..' . '/mikey179/vfsstream/src/vfsFile.php',
-        'bovigo\\vfs\\vfsStream' => __DIR__ . '/..' . '/mikey179/vfsstream/src/vfsStream.php',
-        'bovigo\\vfs\\vfsStreamContainer' => __DIR__ . '/..' . '/mikey179/vfsstream/src/vfsStreamContainer.php',
-        'bovigo\\vfs\\vfsStreamContent' => __DIR__ . '/..' . '/mikey179/vfsstream/src/vfsStreamContent.php',
-        'bovigo\\vfs\\vfsStreamException' => __DIR__ . '/..' . '/mikey179/vfsstream/src/vfsStreamException.php',
-        'bovigo\\vfs\\visitor\\BaseVisitor' => __DIR__ . '/..' . '/mikey179/vfsstream/src/visitor/BaseVisitor.php',
-        'bovigo\\vfs\\visitor\\Printer' => __DIR__ . '/..' . '/mikey179/vfsstream/src/visitor/Printer.php',
-        'bovigo\\vfs\\visitor\\StructureInspector' => __DIR__ . '/..' . '/mikey179/vfsstream/src/visitor/StructureInspector.php',
-        'bovigo\\vfs\\visitor\\vfsStreamVisitor' => __DIR__ . '/..' . '/mikey179/vfsstream/src/visitor/vfsStreamVisitor.php',
-        'org\\bovigo\\vfs\\DotDirectory' => __DIR__ . '/..' . '/mikey179/vfsstream/org/bovigo/vfs/DotDirectory.php',
-        'org\\bovigo\\vfs\\Quota' => __DIR__ . '/..' . '/mikey179/vfsstream/org/bovigo/vfs/Quota.php',
-        'org\\bovigo\\vfs\\content\\FileContent' => __DIR__ . '/..' . '/mikey179/vfsstream/org/bovigo/vfs/content/FileContent.php',
-        'org\\bovigo\\vfs\\content\\LargeFileContent' => __DIR__ . '/..' . '/mikey179/vfsstream/org/bovigo/vfs/content/LargeFileContent.php',
-        'org\\bovigo\\vfs\\content\\SeekableFileContent' => __DIR__ . '/..' . '/mikey179/vfsstream/org/bovigo/vfs/content/SeekableFileContent.php',
-        'org\\bovigo\\vfs\\content\\StringBasedFileContent' => __DIR__ . '/..' . '/mikey179/vfsstream/org/bovigo/vfs/content/StringBasedFileContent.php',
-        'org\\bovigo\\vfs\\vfsStream' => __DIR__ . '/..' . '/mikey179/vfsstream/org/bovigo/vfs/vfsStream.php',
-        'org\\bovigo\\vfs\\vfsStreamAbstractContent' => __DIR__ . '/..' . '/mikey179/vfsstream/org/bovigo/vfs/vfsStreamAbstractContent.php',
-        'org\\bovigo\\vfs\\vfsStreamBlock' => __DIR__ . '/..' . '/mikey179/vfsstream/org/bovigo/vfs/vfsStreamBlock.php',
-        'org\\bovigo\\vfs\\vfsStreamContainer' => __DIR__ . '/..' . '/mikey179/vfsstream/org/bovigo/vfs/vfsStreamContainer.php',
-        'org\\bovigo\\vfs\\vfsStreamContainerIterator' => __DIR__ . '/..' . '/mikey179/vfsstream/org/bovigo/vfs/vfsStreamContainerIterator.php',
-        'org\\bovigo\\vfs\\vfsStreamContent' => __DIR__ . '/..' . '/mikey179/vfsstream/org/bovigo/vfs/vfsStreamContent.php',
-        'org\\bovigo\\vfs\\vfsStreamDirectory' => __DIR__ . '/..' . '/mikey179/vfsstream/org/bovigo/vfs/vfsStreamDirectory.php',
-        'org\\bovigo\\vfs\\vfsStreamException' => __DIR__ . '/..' . '/mikey179/vfsstream/org/bovigo/vfs/vfsStreamException.php',
-        'org\\bovigo\\vfs\\vfsStreamFile' => __DIR__ . '/..' . '/mikey179/vfsstream/org/bovigo/vfs/vfsStreamFile.php',
-        'org\\bovigo\\vfs\\vfsStreamWrapper' => __DIR__ . '/..' . '/mikey179/vfsstream/org/bovigo/vfs/vfsStreamWrapper.php',
-        'org\\bovigo\\vfs\\visitor\\vfsStreamAbstractVisitor' => __DIR__ . '/..' . '/mikey179/vfsstream/org/bovigo/vfs/visitor/vfsStreamAbstractVisitor.php',
-        'org\\bovigo\\vfs\\visitor\\vfsStreamPrintVisitor' => __DIR__ . '/..' . '/mikey179/vfsstream/org/bovigo/vfs/visitor/vfsStreamPrintVisitor.php',
-        'org\\bovigo\\vfs\\visitor\\vfsStreamStructureVisitor' => __DIR__ . '/..' . '/mikey179/vfsstream/org/bovigo/vfs/visitor/vfsStreamStructureVisitor.php',
-        'org\\bovigo\\vfs\\visitor\\vfsStreamVisitor' => __DIR__ . '/..' . '/mikey179/vfsstream/org/bovigo/vfs/visitor/vfsStreamVisitor.php',
+        'org\\bovigo\\vfs\\DotDirectory' => __DIR__ . '/..' . '/mikey179/vfsstream/src/main/php/org/bovigo/vfs/DotDirectory.php',
+        'org\\bovigo\\vfs\\Quota' => __DIR__ . '/..' . '/mikey179/vfsstream/src/main/php/org/bovigo/vfs/Quota.php',
+        'org\\bovigo\\vfs\\content\\FileContent' => __DIR__ . '/..' . '/mikey179/vfsstream/src/main/php/org/bovigo/vfs/content/FileContent.php',
+        'org\\bovigo\\vfs\\content\\LargeFileContent' => __DIR__ . '/..' . '/mikey179/vfsstream/src/main/php/org/bovigo/vfs/content/LargeFileContent.php',
+        'org\\bovigo\\vfs\\content\\SeekableFileContent' => __DIR__ . '/..' . '/mikey179/vfsstream/src/main/php/org/bovigo/vfs/content/SeekableFileContent.php',
+        'org\\bovigo\\vfs\\content\\StringBasedFileContent' => __DIR__ . '/..' . '/mikey179/vfsstream/src/main/php/org/bovigo/vfs/content/StringBasedFileContent.php',
+        'org\\bovigo\\vfs\\vfsStream' => __DIR__ . '/..' . '/mikey179/vfsstream/src/main/php/org/bovigo/vfs/vfsStream.php',
+        'org\\bovigo\\vfs\\vfsStreamAbstractContent' => __DIR__ . '/..' . '/mikey179/vfsstream/src/main/php/org/bovigo/vfs/vfsStreamAbstractContent.php',
+        'org\\bovigo\\vfs\\vfsStreamBlock' => __DIR__ . '/..' . '/mikey179/vfsstream/src/main/php/org/bovigo/vfs/vfsStreamBlock.php',
+        'org\\bovigo\\vfs\\vfsStreamContainer' => __DIR__ . '/..' . '/mikey179/vfsstream/src/main/php/org/bovigo/vfs/vfsStreamContainer.php',
+        'org\\bovigo\\vfs\\vfsStreamContainerIterator' => __DIR__ . '/..' . '/mikey179/vfsstream/src/main/php/org/bovigo/vfs/vfsStreamContainerIterator.php',
+        'org\\bovigo\\vfs\\vfsStreamContent' => __DIR__ . '/..' . '/mikey179/vfsstream/src/main/php/org/bovigo/vfs/vfsStreamContent.php',
+        'org\\bovigo\\vfs\\vfsStreamDirectory' => __DIR__ . '/..' . '/mikey179/vfsstream/src/main/php/org/bovigo/vfs/vfsStreamDirectory.php',
+        'org\\bovigo\\vfs\\vfsStreamException' => __DIR__ . '/..' . '/mikey179/vfsstream/src/main/php/org/bovigo/vfs/vfsStreamException.php',
+        'org\\bovigo\\vfs\\vfsStreamFile' => __DIR__ . '/..' . '/mikey179/vfsstream/src/main/php/org/bovigo/vfs/vfsStreamFile.php',
+        'org\\bovigo\\vfs\\vfsStreamWrapper' => __DIR__ . '/..' . '/mikey179/vfsstream/src/main/php/org/bovigo/vfs/vfsStreamWrapper.php',
+        'org\\bovigo\\vfs\\visitor\\vfsStreamAbstractVisitor' => __DIR__ . '/..' . '/mikey179/vfsstream/src/main/php/org/bovigo/vfs/visitor/vfsStreamAbstractVisitor.php',
+        'org\\bovigo\\vfs\\visitor\\vfsStreamPrintVisitor' => __DIR__ . '/..' . '/mikey179/vfsstream/src/main/php/org/bovigo/vfs/visitor/vfsStreamPrintVisitor.php',
+        'org\\bovigo\\vfs\\visitor\\vfsStreamStructureVisitor' => __DIR__ . '/..' . '/mikey179/vfsstream/src/main/php/org/bovigo/vfs/visitor/vfsStreamStructureVisitor.php',
+        'org\\bovigo\\vfs\\visitor\\vfsStreamVisitor' => __DIR__ . '/..' . '/mikey179/vfsstream/src/main/php/org/bovigo/vfs/visitor/vfsStreamVisitor.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit657ac079313fab046eb8c29fe1d6992b::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit657ac079313fab046eb8c29fe1d6992b::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit657ac079313fab046eb8c29fe1d6992b::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitc953895d8a65f9411059031dd0d1f3ea::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitc953895d8a65f9411059031dd0d1f3ea::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitc953895d8a65f9411059031dd0d1f3ea::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitc953895d8a65f9411059031dd0d1f3ea::$classMap;
 
         }, null, ClassLoader::class);
     }

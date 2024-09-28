@@ -29,6 +29,19 @@ require __DIR__ . '/app/Config/Paths.php';
 // Path to the front controller
 define('FCPATH', __DIR__ . DIRECTORY_SEPARATOR . 'public' . DIRECTORY_SEPARATOR);
 
+/**
+ * See https://www.php.net/manual/en/function.str-contains.php#126277
+ */
+if (! function_exists('str_contains')) {
+    /**
+     * Polyfill of str_contains()
+     */
+    function str_contains(string $haystack, string $needle): bool
+    {
+        return empty($needle) || strpos($haystack, $needle) !== false;
+    }
+}
+
 class preload
 {
     /**
@@ -43,20 +56,17 @@ class preload
                 '/system/Database/Postgre/',
                 '/system/Database/SQLite3/',
                 '/system/Database/SQLSRV/',
-                // Not needed for web apps.
+                // Not needed.
                 '/system/Database/Seeder.php',
                 '/system/Test/',
+                '/system/Language/',
                 '/system/CLI/',
                 '/system/Commands/',
                 '/system/Publisher/',
                 '/system/ComposerScripts.php',
-                // Not Class/Function files.
-                '/system/Config/Routes.php',
-                '/system/Language/',
-                '/system/bootstrap.php',
-                '/system/rewrite.php',
                 '/Views/',
                 // Errors occur.
+                '/system/Config/Routes.php',
                 '/system/ThirdParty/',
             ],
         ],
@@ -67,18 +77,16 @@ class preload
         $this->loadAutoloader();
     }
 
-    private function loadAutoloader(): void
+    private function loadAutoloader()
     {
         $paths = new Config\Paths();
-        require rtrim($paths->systemDirectory, '\\/ ') . DIRECTORY_SEPARATOR . 'Boot.php';
-
-        CodeIgniter\Boot::preload($paths);
+        require rtrim($paths->systemDirectory, '\\/ ') . DIRECTORY_SEPARATOR . 'bootstrap.php';
     }
 
     /**
      * Load PHP files.
      */
-    public function load(): void
+    public function load()
     {
         foreach ($this->paths as $path) {
             $directory = new RecursiveDirectoryIterator($path['include']);

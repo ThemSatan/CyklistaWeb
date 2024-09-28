@@ -159,7 +159,7 @@ class Builder extends BaseBuilder
         $table = $this->QBFrom[0];
         $set   = $this->binds;
 
-        array_walk($set, static function (array &$item): void {
+        array_walk($set, static function (array &$item) {
             $item = $item[0];
         });
 
@@ -411,8 +411,10 @@ class Builder extends BaseBuilder
      * Returns cast expression.
      *
      * @TODO move this to BaseBuilder in 4.5.0
+     *
+     * @param float|int|string $expression
      */
-    private function cast(string $expression, ?string $type): string
+    private function cast($expression, ?string $type): string
     {
         return ($type === null) ? $expression : 'CAST(' . $expression . ' AS ' . strtoupper($type) . ')';
     }

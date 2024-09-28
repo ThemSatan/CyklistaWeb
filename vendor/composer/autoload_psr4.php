@@ -6,8 +6,6 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'org\\bovigo\\vfs\\' => array($vendorDir . '/mikey179/vfsstream/org/bovigo/vfs'),
-    'bovigo\\vfs\\' => array($vendorDir . '/mikey179/vfsstream/src'),
     'Tests\\Support\\' => array($baseDir . '/tests/_support'),
     'Psr\\Log\\' => array($vendorDir . '/psr/log/src'),
     'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),
@@ -16,7 +14,6 @@ return array(
     'IonAuth\\' => array($vendorDir . '/benedmunds/codeigniter-ion-auth'),
     'Faker\\' => array($vendorDir . '/fakerphp/faker/src/Faker'),
     'DeepCopy\\' => array($vendorDir . '/myclabs/deep-copy/src/DeepCopy'),
-    'Config\\' => array($baseDir . '/app/Config'),
     'CodeIgniter\\' => array($vendorDir . '/codeigniter4/framework/system'),
     'App\\' => array($baseDir . '/app'),
 );

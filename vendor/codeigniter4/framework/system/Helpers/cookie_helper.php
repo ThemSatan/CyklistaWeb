@@ -35,6 +35,8 @@ if (! function_exists('set_cookie')) {
      * @param bool|null           $httpOnly True makes the cookie accessible via http(s) only (no javascript)
      * @param string|null         $sameSite The cookie SameSite value
      *
+     * @return void
+     *
      * @see \CodeIgniter\HTTP\Response::setCookie()
      */
     function set_cookie(
@@ -47,7 +49,7 @@ if (! function_exists('set_cookie')) {
         ?bool $secure = null,
         ?bool $httpOnly = null,
         ?string $sameSite = null
-    ): void {
+    ) {
         $response = service('response');
         $response->setCookie($name, $value, $expire, $domain, $path, $prefix, $secure, $httpOnly, $sameSite);
     }
@@ -90,9 +92,11 @@ if (! function_exists('delete_cookie')) {
      * @param string $path   the cookie path
      * @param string $prefix the cookie prefix
      *
+     * @return void
+     *
      * @see \CodeIgniter\HTTP\Response::deleteCookie()
      */
-    function delete_cookie($name, string $domain = '', string $path = '/', string $prefix = ''): void
+    function delete_cookie($name, string $domain = '', string $path = '/', string $prefix = '')
     {
         service('response')->deleteCookie($name, $domain, $path, $prefix);
     }

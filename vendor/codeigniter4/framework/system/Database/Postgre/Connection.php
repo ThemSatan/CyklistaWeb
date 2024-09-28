@@ -58,7 +58,8 @@ class Connection extends BaseConnection
     /**
      * Connect to the database.
      *
-     * @return false|PgSqlConnection
+     * @return         false|resource
+     * @phpstan-return false|PgSqlConnection
      */
     public function connect(bool $persistent = false)
     {
@@ -77,14 +78,9 @@ class Connection extends BaseConnection
         $this->connID = $persistent === true ? pg_pconnect($this->DSN) : pg_connect($this->DSN);
 
         if ($this->connID !== false) {
-            if (
-                $persistent === true
-                && pg_connection_status($this->connID) === PGSQL_CONNECTION_BAD
-                && pg_ping($this->connID) === false
+            if ($persistent === true && pg_connection_status($this->connID) === PGSQL_CONNECTION_BAD && pg_ping($this->connID) === false
             ) {
-                $error = pg_last_error($this->connID);
-
-                throw new DatabaseException($error);
+                return false;
             }
 
             if (! empty($this->schema)) {
@@ -92,9 +88,7 @@ class Connection extends BaseConnection
             }
 
             if ($this->setClientEncoding($this->charset) === false) {
-                $error = pg_last_error($this->connID);
-
-                throw new DatabaseException($error);
+                return false;
             }
         }
 
@@ -103,8 +97,6 @@ class Connection extends BaseConnection
 
     /**
      * Converts the DSN with semicolon syntax.
-     *
-     * @return void
      */
     private function convertDSN()
     {
@@ -144,8 +136,6 @@ class Connection extends BaseConnection
     /**
      * Keep or establish the connection if no queries have been sent for
      * a length of time exceeding the server's idle timeout.
-     *
-     * @return void
      */
     public function reconnect()
     {
@@ -156,8 +146,6 @@ class Connection extends BaseConnection
 
     /**
      * Close the database connection.
-     *
-     * @return void
      */
     protected function _close()
     {
@@ -196,7 +184,8 @@ class Connection extends BaseConnection
     /**
      * Executes the query against the database.
      *
-     * @return false|PgSqlResult
+     * @return         false|resource
+     * @phpstan-return false|PgSqlResult
      */
     protected function execute(string $sql)
     {

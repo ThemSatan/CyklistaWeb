@@ -140,7 +140,7 @@ final class DataConverter
             return $classObj;
         }
 
-        $classSet = Closure::bind(function ($key, $value): void {
+        $classSet = Closure::bind(function ($key, $value) {
             $this->{$key} = $value;
         }, $classObj, $classname);
 

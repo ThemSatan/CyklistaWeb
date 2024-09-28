@@ -68,10 +68,10 @@ class Cell
     /**
      * Render a cell, returning its body as a string.
      *
-     * @param string                            $library   Cell class and method name.
-     * @param array<string, string>|string|null $params    Parameters to pass to the method.
-     * @param int                               $ttl       Number of seconds to cache the cell.
-     * @param string|null                       $cacheName Cache item name.
+     * @param string            $library   Cell class and method name.
+     * @param array|string|null $params    Parameters to pass to the method.
+     * @param int               $ttl       Number of seconds to cache the cell.
+     * @param string|null       $cacheName Cache item name.
      *
      * @throws ReflectionException
      */
@@ -117,10 +117,9 @@ class Cell
      * If a string, it should be in the format "key1=value key2=value".
      * It will be split and returned as an array.
      *
-     * @param         array<string, string>|string|null       $params
-     * @phpstan-param array<string, string>|string|float|null $params
+     * @param array|string|null $params
      *
-     * @return array<string, string>
+     * @return array
      */
     public function prepareParams($params)
     {

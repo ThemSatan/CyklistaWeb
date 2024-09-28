@@ -18,7 +18,6 @@ use CodeIgniter\HTTP\RedirectResponse;
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use CodeIgniter\Security\Exceptions\SecurityException;
-use CodeIgniter\Security\Security;
 
 /**
  * CSRF filter.
@@ -31,7 +30,14 @@ use CodeIgniter\Security\Security;
 class CSRF implements FilterInterface
 {
     /**
-     * CSRF verification.
+     * Do whatever processing this filter needs to do.
+     * By default it should not return anything during
+     * normal execution. However, when an abnormal state
+     * is found, it should return an instance of
+     * CodeIgniter\HTTP\Response. If it does, script
+     * execution will end and that Response will be
+     * sent back to the client, allowing for error pages,
+     * redirects, etc.
      *
      * @param list<string>|null $arguments
      *
@@ -45,7 +51,6 @@ class CSRF implements FilterInterface
             return;
         }
 
-        /** @var Security $security */
         $security = service('security');
 
         try {

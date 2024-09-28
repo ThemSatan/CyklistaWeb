@@ -175,17 +175,18 @@ class RedisHandler extends BaseHandler
      */
     public function deleteMatching(string $pattern)
     {
-        /** @var list<string> $matchedKeys */
         $matchedKeys = [];
-        $pattern     = static::validateKey($pattern, $this->prefix);
         $iterator    = null;
 
         do {
-            /** @var false|list<string>|Redis $keys */
+            // Scan for some keys
             $keys = $this->redis->scan($iterator, $pattern);
 
-            if (is_array($keys)) {
-                $matchedKeys = [...$matchedKeys, ...$keys];
+            // Redis may return empty results, so protect against that
+            if ($keys !== false) {
+                foreach ($keys as $key) {
+                    $matchedKeys[] = $key;
+                }
             }
         } while ($iterator > 0);
 

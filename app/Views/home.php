@@ -1,14 +1,23 @@
 <?=$this->extend("layout/master");?>
 <?=$this->section("content");?>
 
+
 <p>praze?! to snad stihnu</p>
 
     <?php
 
     echo "<table class='table list-table table-hover pt-2 mx-auto'>
-                <tbody class='table-dark'>
-                
-                <tr>
+            
+                <tbody class='table-dark'>";
+    if ($adminCheck){
+        echo            "<div class='edit-button'>".
+                            
+                                anchor('dev',' ',['class' => 'fa-solid fa-pencil pencil'])
+                            
+                        ."</div>";
+                    }
+
+    echo        "<tr>
                     <td>No.</td>
                     <td>Race</td>
                     <td>Country</td>

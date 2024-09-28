@@ -188,11 +188,6 @@ class ShowTableInfo extends BaseCommand
         $this->db->setPrefix($this->DBPrefix);
     }
 
-    /**
-     * Show Data of Table
-     *
-     * @return void
-     */
     private function showDataOfTable(string $tableName, int $limitRows, int $limitFieldValue)
     {
         CLI::write("Data of Table \"{$tableName}\":", 'black', 'yellow');
@@ -212,13 +207,6 @@ class ShowTableInfo extends BaseCommand
         CLI::table($this->tbody, $thead);
     }
 
-    /**
-     * Show All Tables
-     *
-     * @param list<string> $tables
-     *
-     * @return void
-     */
     private function showAllTables(array $tables)
     {
         CLI::write('The following is a list of the names of all database tables:', 'black', 'yellow');
@@ -231,13 +219,6 @@ class ShowTableInfo extends BaseCommand
         CLI::newLine();
     }
 
-    /**
-     * Make body for table
-     *
-     * @param list<string> $tables
-     *
-     * @return list<list<int|string>>
-     */
     private function makeTbodyForShowAllTables(array $tables): array
     {
         $this->removeDBPrefix();
@@ -263,11 +244,6 @@ class ShowTableInfo extends BaseCommand
         return $this->tbody;
     }
 
-    /**
-     * Make table rows
-     *
-     * @return list<list<int|string>>
-     */
     private function makeTableRows(
         string $tableName,
         int $limitRows,

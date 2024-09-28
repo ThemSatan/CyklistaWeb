@@ -162,7 +162,7 @@ final class AutoRouterImproved implements AutoRouterInterface
             $segment = array_shift($segments);
             $controllerPos++;
 
-            $class = $this->translateURI($segment);
+            $class = $this->translateURIDashes($segment);
 
             // as soon as we encounter any segment that is not PSR-4 compliant, stop searching
             if (! $this->isValidSegment($class)) {
@@ -209,7 +209,7 @@ final class AutoRouterImproved implements AutoRouterInterface
             }
 
             $namespaces = array_map(
-                fn ($segment) => $this->translateURI($segment),
+                fn ($segment) => $this->translateURIDashes($segment),
                 $segments
             );
 
@@ -307,7 +307,7 @@ final class AutoRouterImproved implements AutoRouterInterface
 
         $method = '';
         if ($methodParam !== null) {
-            $method = $httpVerb . $this->translateURI($methodParam);
+            $method = $httpVerb . $this->translateURIDashes($methodParam);
 
             $this->checkUriForMethod($method);
         }
@@ -519,17 +519,7 @@ final class AutoRouterImproved implements AutoRouterInterface
             return;
         }
 
-        if (
-            // For example, if `getSomeMethod()` exists in the controller, only
-            // the URI `controller/some-method` should be accessible. But if a
-            // visitor navigates to the URI `controller/somemethod`, `getSomemethod()`
-            // will be checked, and `method_exists()` will return true because
-            // method names in PHP are case-insensitive.
-            method_exists($this->controller, $method)
-            // But we do not permit `controller/somemethod`, so check the exact
-            // method name.
-            && ! in_array($method, get_class_methods($this->controller), true)
-        ) {
+        if (! in_array($method, get_class_methods($this->controller), true)) {
             throw new PageNotFoundException(
                 '"' . $this->controller . '::' . $method . '()" is not found.'
             );
@@ -546,10 +536,7 @@ final class AutoRouterImproved implements AutoRouterInterface
         return (bool) preg_match('/^[a-zA-Z_\x80-\xff][a-zA-Z0-9_\x80-\xff]*$/', $segment);
     }
 
-    /**
-     * Translates URI segment to CamelCase or replaces `-` with `_`.
-     */
-    private function translateURI(string $segment): string
+    private function translateURIDashes(string $segment): string
     {
         if ($this->translateUriToCamelCase) {
             if (strtolower($segment) !== $segment) {

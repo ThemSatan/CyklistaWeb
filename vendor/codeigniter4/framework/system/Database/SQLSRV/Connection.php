@@ -164,8 +164,6 @@ class Connection extends BaseConnection
     /**
      * Keep or establish the connection if no queries have been sent for
      * a length of time exceeding the server's idle timeout.
-     *
-     * @return void
      */
     public function reconnect()
     {
@@ -175,8 +173,6 @@ class Connection extends BaseConnection
 
     /**
      * Close the database connection.
-     *
-     * @return void
      */
     protected function _close()
     {

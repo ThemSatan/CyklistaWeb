@@ -23,23 +23,29 @@
                 </button>
                 
                 <div class="dropdown-content" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="<?=base_url('home')?>"><i class="fa-solid fa-caret-right"></i> nazev page</a>
+                    <a class="dropdown-item" href="<?=base_url('home')?>"><i class="fa-solid fa-caret-right"></i> Domů</a>
                 </div>
             </div>
                 <li class="nav-item">
-                    
                     <?php
-                    /*if (!$logged){
+                    if (!$logged){
                         echo anchor('login','Přihlásit',['class' => 'btn']);
-                    }*/
+                    }
                     ?>
-                    
                 </li>
                 <li class="nav-item">
-
+                    <?php
+                    if (!$logged){
+                        echo anchor('register','Registrovat',['class' => 'btn']);
+                    }
+                    ?>
                 </li>
                 <li class="nav-item">
-
+                    <?php
+                    if ($logged){
+                        echo anchor('logout','Odhlásit',['class' => 'btn']);
+                    }
+                    ?>
                 </li>
             </ul>
             

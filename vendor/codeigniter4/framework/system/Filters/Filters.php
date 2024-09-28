@@ -522,7 +522,7 @@ class Filters
             [$name, $arguments] = explode(':', $name);
 
             $arguments = explode(',', $arguments);
-            array_walk($arguments, static function (&$item): void {
+            array_walk($arguments, static function (&$item) {
                 $item = trim($item);
             });
         }
