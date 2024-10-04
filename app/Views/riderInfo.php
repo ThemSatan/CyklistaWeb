@@ -14,20 +14,25 @@
                 ?>
                 <hr>
                 <div class='container' >
-                    <table>
+                    <table class='table list-table table-hover pt-2 mx-auto'>
+                        <tbody class='table-dark'>
+                            <tr>
+                                <td>Stát</td>
+                                <td>Datum narození</td>
+                                <td>Místo Narození</td>
+                                <td>Váha</td>
+                                <td>Výška</td>
+                            </tr>
+                            <tr>
+                                <td><span class='flag fi fi-<?=$row->country?>'></td>
+                                <td><?=$row->date_of_birth?></td>
+                                <td><?=$row->place_of_birth?></td>
+                                <td><?=$row->weight?></td>
+                                <td><?=$row->height?></td>
+                            </tr>
+                        </tbody>
                     </table>
-                    <p>
-                        <?php
-                        echo "<br>
-                        <hr>
-                        <b class='titles'>Stát: </b><span class='flag fi fi-".$row->country."'></span><br>
-                        <b class='titles'>Datum narození: </b>".$row->date_of_birth."<br>
-                        <b class='titles'>Místo narození: </b>".$row->place_of_birth."<br>
-                        <b class='titles'>Váha: </b>".$row->weight." kg <br>
-                        <b class='titles'>Výška: </b>".$row->height." cm<br>";
-                        ?>
-                        <img class='profile-image mx-auto center' src='<?=base_url('assets/images/riders')."/".$row->photo?>'>
-                    </p>
+                        <img class='profile-image' src='<?=base_url('assets/images/riders')."/".$row->photo?>'>
                     </div>
             </div>
     

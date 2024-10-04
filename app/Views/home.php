@@ -42,7 +42,8 @@
     
     <?php
     }
-echo "</table>";
+echo "</tbody>
+    </table>";
 
 echo "<div class='d-flex flex-column justify-content-center align-items-center'>
         <p class= text-center>".$pager->links()."</p>
