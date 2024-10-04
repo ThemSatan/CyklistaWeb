@@ -50,17 +50,17 @@ class CheckPhpIni
     private static function outputForCli(array $output, array $thead, array $tbody): void
     {
         foreach ($output as $directive => $values) {
-            $current        = $values['current'];
+            $current        = $values['current'] ?? '';
             $notRecommended = false;
 
             if ($values['recommended'] !== '') {
-                if ($values['recommended'] !== $values['current']) {
+                if ($values['recommended'] !== $current) {
                     $notRecommended = true;
                 }
 
                 $current = $notRecommended
-                    ? CLI::color($values['current'] === '' ? 'n/a' : $values['current'], 'red')
-                    : $values['current'];
+                    ? CLI::color($current === '' ? 'n/a' : $current, 'red')
+                    : $current;
             }
 
             $directive = $notRecommended ? CLI::color($directive, 'red') : $directive;
@@ -141,9 +141,10 @@ class CheckPhpIni
         $ini    = ini_get_all();
 
         foreach ($items as $key => $values) {
+            $hasKeyInIni  = array_key_exists($key, $ini);
             $output[$key] = [
-                'global'      => $ini[$key]['global_value'],
-                'current'     => $ini[$key]['local_value'],
+                'global'      => $hasKeyInIni ? $ini[$key]['global_value'] : 'disabled',
+                'current'     => $hasKeyInIni ? $ini[$key]['local_value'] : 'disabled',
                 'recommended' => $values['recommended'] ?? '',
                 'remark'      => $values['remark'] ?? '',
             ];

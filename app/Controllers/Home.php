@@ -7,6 +7,8 @@ use CodeIgniter\HTTP\ResponseInterface;
 use \IonAuth\Libraries\IonAuth;
 
 use App\Models\race as rModel;
+use App\Models\location as lModel;
+use App\Models\rider as rdModel;
 use App\Models\country as cModel;
 use Config\MyConfig as ConfModel;
 
@@ -14,6 +16,8 @@ class Home extends BaseController
 {
     function __construct() {
         $this->rModel = new rModel();
+        $this->lModel = new lModel();
+        $this->rdModel = new rdModel();
         $this->cModel = new cModel();
         $this->config = new ConfModel();
     }
@@ -39,6 +43,30 @@ class Home extends BaseController
 
         return view('home',$data);
     }
+
+    function riders()
+    {
+        $config = new ConfModel();
+        $perpage=$this->config->variable;
+        $data['array']= $this->rdModel->orderBy("id","asc")->paginate($perpage);
+        $data['pager'] = $this->rdModel->pager;
+        $data['logged'] = $this->ionAuth->loggedIn();
+        $data['adminCheck'] = $this->ionAuth->isAdmin();
+        $data['title']="Naše Cyklistika";
+
+        return view('riders',$data);
+    }
+
+    function riderInfo($id)
+    {
+        $data['array']= $this->rdModel->where('id', $id)->orderBy("id","asc")->findAll();
+        $data['logged'] = $this->ionAuth->loggedIn();
+        $data['adminCheck'] = $this->ionAuth->isAdmin();
+        $data['title']="Naše Cyklistika";
+
+        return view('riderInfo',$data);
+    }
+
 
     /*EDITING PAGE*/
 

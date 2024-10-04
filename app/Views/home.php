@@ -19,9 +19,9 @@
 
     echo        "<tr>
                     <td>No.</td>
-                    <td>Race</td>
-                    <td>Country</td>
-                    <td>Type</td>
+                    <td>Závod</td>
+                    <td>Stát</td>
+                    <td>Typ</td>
                 </tr>";
 
     foreach($array as $row){

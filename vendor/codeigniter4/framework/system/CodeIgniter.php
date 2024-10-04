@@ -56,7 +56,7 @@ class CodeIgniter
     /**
      * The current version of CodeIgniter Framework
      */
-    public const CI_VERSION = '4.5.1';
+    public const CI_VERSION = '4.5.5';
 
     /**
      * App startup time.
@@ -253,7 +253,7 @@ class CodeIgniter
     {
         // If we have KINT_DIR it means it's already loaded via composer
         if (! defined('KINT_DIR')) {
-            spl_autoload_register(function ($class) {
+            spl_autoload_register(function ($class): void {
                 $class = explode('\\', $class);
 
                 if (array_shift($class) !== 'Kint') {
@@ -353,7 +353,7 @@ class CodeIgniter
         } else {
             try {
                 $this->response = $this->handleRequest($routes, config(Cache::class), $returnResponse);
-            } catch (ResponsableInterface|DeprecatedRedirectException $e) {
+            } catch (DeprecatedRedirectException|ResponsableInterface $e) {
                 $this->outputBufferingEnd();
                 if ($e instanceof DeprecatedRedirectException) {
                     $e = new RedirectException($e->getMessage(), $e->getCode(), $e);

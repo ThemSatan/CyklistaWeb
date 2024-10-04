@@ -23,7 +23,8 @@
                 </button>
                 
                 <div class="dropdown-content" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="<?=base_url('home')?>"><i class="fa-solid fa-caret-right"></i> Domů</a>
+                    <a class="dropdown-item" href="<?=base_url('home')?>"><i class="fa-solid fa-caret-right"></i> Závody</a>
+                    <a class="dropdown-item" href="<?=base_url('rider')?>"><i class="fa-solid fa-caret-right"></i> Cyklisti</a>
                 </div>
             </div>
                 <li class="nav-item">
