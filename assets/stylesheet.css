@@ -287,6 +287,21 @@ th{
   margin-bottom: 20px;
 }
 
+.stage-image{
+  position: absolute;
+  top: 100px;
+  left: 170px;
+  width:120px;
+  height:180px;
+  object-fit:cover;
+  border-radius: 10px;
+  background-color: #271b18;
+  border-style: solid;
+  border-color: black;
+  border-width: 10px;
+  margin-bottom: 20px;
+}
+
  /*CARDS*/
 
   .card{

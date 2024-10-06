@@ -34,12 +34,14 @@
                                 <td><?=$row->departure?></td>
                                 <td><?=$row->arrival?></td>
                                 <td><?=$row->distance?></td>
-                                <td><?=$row->parcour_type?></td>
+                                <td><?=$row->parcour_name?></td>
                                 <td><?=$row->vertical_meters?></td>
-                                <td><?=$row->id_race_year?></td>
+                                <td><?=$row->year_race?></td>
                             </tr>
                         </tbody>
                     </table>
+                    <hr>
+                        <img class='stage-image' src='<?=base_url('assets/images/stages/profiles')."/".$row->profile?>'>
                     </div>
             </div>
     

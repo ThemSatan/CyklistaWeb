@@ -89,6 +89,8 @@ class Home extends BaseController
     function stage($id)
     {
         $data['array']= $this->sModel
+        ->select('stage.*, parcour_type.name as parcour_name')
+        ->select('stage.*, race_year.year as year_race')
         ->join('parcour_type', 'stage.parcour_type = parcour_type.id', 'left')
         ->join('race_year', 'stage.id_race_year = race_year.id', 'left')
         ->where('stage.id', $id)

@@ -26,7 +26,7 @@
                 echo "<tr>
                         <td>".$row->rider_name."</td>
                         <td>".$row->team_link."</td>
-                        <td><a class='races' href='result/".$row->id."'>".$row->id_stage."</td>
+                        <td><a class='races' href='result/".$row->id_stage."'>".$row->id_stage."</td>
                         <td>".$row->time."</td>
                         <td>".$row->bonification."</td>
                         <td>".$row->point."</td>
