@@ -6,9 +6,12 @@ use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
 use \IonAuth\Libraries\IonAuth;
 
+use App\Models\stage as sModel;
 use App\Models\race as rModel;
 use App\Models\location as lModel;
 use App\Models\rider as rdModel;
+use App\Models\result as reModel;
+use App\Models\year as ryModel;
 use App\Models\country as cModel;
 use Config\MyConfig as ConfModel;
 
@@ -16,8 +19,11 @@ class Home extends BaseController
 {
     function __construct() {
         $this->rModel = new rModel();
+        $this->sModel = new sModel();
         $this->lModel = new lModel();
         $this->rdModel = new rdModel();
+        $this->reModel = new reModel();
+        $this->ryModel = new ryModel();
         $this->cModel = new cModel();
         $this->config = new ConfModel();
     }
@@ -44,6 +50,66 @@ class Home extends BaseController
         return view('home',$data);
     }
 
+    function year()
+    {
+        $config = new ConfModel();
+        $perpage=$this->config->variable;
+        $data['array']= $this->ryModel
+        ->select('race_year.*, race.default_name as default_name_race')
+        ->join('race', 'race_year.id_race = race.id', 'left')
+        ->select('race_year.*, uci_tour_type.name as uci_tour_name')
+        ->join('uci_tour_type', 'race_year.uci_tour = uci_tour_type.id', 'left')
+        ->orderBy("id","asc")
+        ->paginate($perpage);
+        $data['pager'] = $this->ryModel->pager;
+        $data['logged'] = $this->ionAuth->loggedIn();
+        $data['adminCheck'] = $this->ionAuth->isAdmin();
+        $data['title']="Naše Cyklistika";
+
+        return view('raceYear',$data);
+    }
+
+    function result()
+    {
+        $config = new ConfModel();
+        $perpage=$this->config->variable;
+        $data['array']= $this->reModel
+        ->select('result.*, rider.last_name as rider_name')
+        ->join('rider', 'result.name_link = rider.link', 'left')
+        ->orderBy("id","asc")
+        ->paginate($perpage);
+        $data['pager'] = $this->reModel->pager;
+        $data['logged'] = $this->ionAuth->loggedIn();
+        $data['adminCheck'] = $this->ionAuth->isAdmin();
+        $data['title']="Naše Cyklistika";
+
+        return view('result',$data);
+    }
+
+    function stage($id)
+    {
+        $data['array']= $this->sModel
+        ->join('parcour_type', 'stage.parcour_type = parcour_type.id', 'left')
+        ->join('race_year', 'stage.id_race_year = race_year.id', 'left')
+        ->where('stage.id', $id)
+        ->findAll();
+        $data['logged'] = $this->ionAuth->loggedIn();
+        $data['adminCheck'] = $this->ionAuth->isAdmin();
+        $data['title']="Naše Cyklistika";
+
+        return view('stage',$data);
+    }
+
+    function graph()
+    {
+        $data['logged'] = $this->ionAuth->loggedIn();
+        $data['adminCheck'] = $this->ionAuth->isAdmin();
+        $data['title']="Naše Cyklistika";
+
+        return view('graph',$data);
+    }
+
+
     function riders()
     {
         $config = new ConfModel();
@@ -59,7 +125,11 @@ class Home extends BaseController
 
     function riderInfo($id)
     {
-        $data['array']= $this->rdModel->where('id', $id)->orderBy("id","asc")->findAll();
+        $data['array']= $this->rdModel
+        ->select('rider.*, location.name as place_of_birth_name')
+        ->join('location', 'rider.place_of_birth = location.id', 'left')
+        ->where('rider.id', $id)
+        ->findAll(1);
         $data['logged'] = $this->ionAuth->loggedIn();
         $data['adminCheck'] = $this->ionAuth->isAdmin();
         $data['title']="Naše Cyklistika";

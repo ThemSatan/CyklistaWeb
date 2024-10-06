@@ -7,7 +7,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand"><img class="logo" src="<?=base_url('assets/images/icon.webp')?>"></a>
+        <a class="navbar-brand"><img class="logo" src="<?=base_url('assets/images/icon.svg')?>"></a>
         <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -25,6 +25,9 @@
                 <div class="dropdown-content" aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item" href="<?=base_url('home')?>"><i class="fa-solid fa-caret-right"></i> Závody</a>
                     <a class="dropdown-item" href="<?=base_url('rider')?>"><i class="fa-solid fa-caret-right"></i> Cyklisti</a>
+                    <a class="dropdown-item" href="<?=base_url('year')?>"><i class="fa-solid fa-caret-right"></i> Závody - Roky</a>
+                    <a class="dropdown-item" href="<?=base_url('graph')?>"><i class="fa-solid fa-caret-right"></i> Graf</a>
+                    <a class="dropdown-item" href="<?=base_url('result')?>"><i class="fa-solid fa-caret-right"></i> Výsledky</a>
                 </div>
             </div>
                 <li class="nav-item">

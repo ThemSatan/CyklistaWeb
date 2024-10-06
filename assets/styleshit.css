@@ -297,6 +297,19 @@ th{
   }
 
   .card-profile{
+    max-width: 800px;
+    background-color: #e7dbda;
+    border-style: hidden;
+    padding-top: 20px;
+    padding-bottom: 200px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #271b18;
+    border-width: 10px;
+    margin-bottom: 20px;
+  }
+
+  .card-profile2{
     max-width: 500px;
     background-color: #e7dbda;
     border-style: hidden;

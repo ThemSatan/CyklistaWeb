@@ -8,8 +8,15 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 $routes->get('home', 'Home::index');
 
+$routes->get('year', 'Home::year');
+
+$routes->get('result', 'Home::result');
+$routes->get('result/(:any)', 'Home::stage/$1');
+
+$routes->get('graph', 'Home::graph');
+
 $routes->get('rider', 'Home::riders');
-$routes->get('rider/(:num)', 'Home::riderInfo/$1');
+$routes->get('rider/(:any)', 'Home::riderInfo/$1');
 
 $routes->get('dev', 'Home::devPage');
 

@@ -7,19 +7,18 @@
     echo "<table class='table list-table table-hover pt-2 mx-auto'>
             
                 <tbody class='table-dark'>";
-    if ($adminCheck){
-        echo            "<div class='edit-button'>".
-                            
-                                anchor('dev',' ',['class' => 'fa-solid fa-pencil pencil'])
-                            
-                        ."</div>";
-                    }
 
     echo        "<tr>
                     <td>No.</td>
-                    <td>Závod</td>
+                    <td>Název</td>
+                    <td>Rok</td>
+                    <td>Začátek</td>
+                    <td>Konec</td>
+                    <td>Uci Tour typ</td>
+                    <td>Logo</td>
+                    <td>Sex</td>
+                    <td>Kategorie</td>
                     <td>Stát</td>
-                    <td>Typ</td>
                 </tr>";
 
     foreach($array as $row){
@@ -28,13 +27,19 @@
             <?php                
                 echo "<tr>
                         <td>".$row->id."</td>
+                        <td>".$row->default_name_race."</td>
+                        <td>".$row->year."</td>
+                        <td>".$row->start_date."</td>
+                        <td>".$row->end_date."</td>
+                        <td>".$row->uci_tour_name."</td>
                         <td>
-                            <a class='races' href='".$row->link."'>".$row->default_name."</a>
+                            <img src='".base_url('assets/images/logos')."/".$row->logo."'>
                         </td>
+                        <td>".$row->sex."</td>
+                        <td>".$row->category."</td>
                         <td>
                         <span class='flag fi fi-".$row->country."'></span>
                         </td>
-                        <td>".$row->type."</td>
                 </tr>"
             ?>
     

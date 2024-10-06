@@ -3,10 +3,10 @@
 
 <div class="container">
     <div class='row no-gutters mx-auto' style="margin-top: 50px; ">
+    
         <?php 
-   
         foreach($array as $row){
-
+            
         ?>
             <div class='card-profile mx-auto'>
                 <?php
@@ -26,7 +26,7 @@
                             <tr>
                                 <td><span class='flag fi fi-<?=$row->country?>'></td>
                                 <td><?=$row->date_of_birth?></td>
-                                <td><?=$row->place_of_birth?></td>
+                                <td><?=$row->place_of_birth_name?></td>
                                 <td><?=$row->weight?></td>
                                 <td><?=$row->height?></td>
                             </tr>
