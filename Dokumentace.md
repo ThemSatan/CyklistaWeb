@@ -111,6 +111,7 @@ _Klára Adámková_ (doplnit)
 _Karla Šoustková_
 -	Dokumentace
 -	Vlajky (název knihovny)
+- Grafy
 -	Tabulky - přidávání, mazání, soft deletes
 -	Zobrazení - karty
 -	Modální okno a alerty
@@ -176,28 +177,34 @@ __Proměnné__:
 
 __2. 'Auth'__
 
-```login():``` Zobrazení přihlašovacího formuláře. Nejprve se přes instanci session získává případná zpráva pro uživatele, která byla uložena jako flash data. Poté se ověřuje, zda je uživatel přihlášen (loggedIn() - IonAuth) a tato informace se uloží do proměnné $data['logged'].
+```initController():``` Nahrazuje základní nastavení kontroleru a inicializuje knihovnu IonAuth pro správu autentizace uživatelů. Tento kontroler využívá IonAuth pro přihlašování a správu uživatelů.
 
-```register():``` stejné jako u login(), ale pro registraci
+```login():``` Načte přihlašovací formulář. Nastaví proměnné:
+- $data['message']: Načte zprávu z session.
+- $data['logged']: Zkontroluje, zda je uživatel přihlášen pomocí metody IonAuth.
+- $data['title']: Nastaví titulek stránky na "Přihlášení".
+Nakonec vrátí view s přihlašovacím formulářem.
 
-```loginComplete():``` Zpracovává data z přihlašovacího formuláře. Přijímá email a heslo, ověřuje je pomocí IonAuth knihovny a přesměruje uživatele na příslušnou stránku podle jejich role (administrátor nebo běžný uživatel). Pokud přihlášení selže, zobrazí chybovou zprávu a přesměruje uživatele zpět na přihlašovací stránku.
+```register():``` Načte registrační formulář. Nastaví proměnné podobně jako v metodě login(), ale s titulkem stránky "Registrace". Vrací view s registračním formulářem.
 
-```logoutComplete():``` Odhlásí uživatele pomocí IonAuth knihovny a přesměruje jej na hlavní stránku s kočkami.
+```loginComplete():``` Zpracuje přihlašovací formulář a získá přihlašovací údaje (email a password) z formuláře odeslaného metodou POST. Pomocí IonAuth ověří přihlašovací údaje a pokud je uživatel přihlášen:
+- Zkontroluje, zda je uživatel administrátor pomocí isAdmin() -> přesměruje uživatele na administrační panel.
+- Pokud uživatel není administrátor, přesměruje jej na hlavní stránku.
+- Pokud přihlášení selže, uloží chybovou zprávu do session a přesměruje zpět na přihlašovací stránku.
 
-```registerComplete():``` Zpracovává data z registračního formuláře. Přijímá uživatelské jméno, email a heslo. Registruje nového uživatele pomocí IonAuth knihovny a přesměruje jej na přihlašovací stránku.
+```logoutComplete():``` Odhlásí aktuálního uživatele pomocí metody IonAuth a přesměruje jej zpět na hlavní stránku.
+
+```registerComplete():``` Zpracuje data z registračního formuláře. Získá údaje z formuláře (email, username, password, name, surname) zaslaného metodou POST. Vytvoří pole s dalšími daty pro uživatele (additional_data), které zahrnuje jméno a příjmení. Pomocí IonAuth vytvoří nového uživatele a následně jej přesměruje na přihlašovací stránku.
 
 __Proměnné:__
 
-```$ionAuth:``` Instance třídy IonAuth. Autentizace uživatelů.
+```$ionAuth:``` Instance třídy IonAuth. Autorizace uživatelů.
 
-```$data['message']:``` Zpráva, která bude zobrazena uživateli, například po neúspěšném pokusu o přihlášení.
-
-```$data['logged']:``` Hodnota označující, zda je uživatel _aktuálně_ přihlášen.
-
-```$data['title']:``` Název stránky, který bude zobrazen v nadpisu formuláře.
+```$session:``` Objekt session pro práci se session daty.
 
 
-## Zdroje
+
+## Zdroje - UPRAVIT!!!
 
 > Z těchto zdrojů jsme čerpali informace a data pro náš web
 
