@@ -206,42 +206,13 @@ __Proměnné:__
 
 ## Zdroje - UPRAVIT!!!
 
-> Z těchto zdrojů jsme čerpali informace a data pro náš web
+> Z těchto zdrojů jsme čerpaly informace a data pro náš web
 
-[1] Oracle Corporation, "Font Awesome Free License," Oracle Industries. *Dostupné:* https://docs.oracle.com/en/industries/financial-services/ofs-analytical-applications/accounting-foundation/24a/alium/font-awesome-free-license.html. [Citováno dne 06.06.2024].
+[1] dompdf, "Dompdf," *Dostupné:* https://github.com/dompdf/dompdf. [Citováno dne 07.10.2024].
 
-[2] cPanel, "PHP upload path is always defined as /tmp," cPanel Support, *Dostupné:* https://support.cpanel.net/hc/en-us/articles/1500011342461-PHP-upload-path-is-always-defined-as-tmp.
+[2] w3schools, "How To Center an Image," *Dostupné:* https://www.w3schools.com/howto/howto_css_image_center.asp.
 
-[3] w3schools, "PHP Reference: Array Functions," w3schools, *Dostupné:* https://www.w3schools.com/php/php_ref_array.asp.
+[3] Chart.js, "Usage | Chart.js Documentation," *Dostupné:* https://www.chartjs.org/docs/latest/getting-started/usage.html.
 
-[4] Ultahost, "How to fix XAMPP error MySQL shutdown unexpectedly?," Ultahost, *Dostupné:* https://ultahost.com/knowledge-base/fix-xampp-error-mysql-shutdown-unexpectedly/.
+- Také jsme použily data z minulého projektu.
 
-[5] w3schools, "PHP MySQL Select Data," w3schools, *Dostupné:* https://www.w3schools.com/php/php_mysql_select.asp.
-
-[6] Stack Overflow, "Count specific data number over total data number," Stack Overflow, *Dostupné:* https://stackoverflow.com/questions/28519583/count-specific-data-number-over-total-data-number/28519596.
-
-[7] Stack Overflow, "PHP: Array of Arrays, get a list of values for a given attribute," Stack Overflow, *Dostupné:* https://stackoverflow.com/questions/39494867/php-array-of-arrays-get-a-list-of-values-for-a-given-attribute.
-
-[8] Stack Overflow, "PHP show all rows in MySQL that contain the same value in a column," Stack Overflow, *Dostupné:* https://stackoverflow.com/questions/40691968/php-show-all-rows-in-mysql-that-contain-the-same-value-in-a-column.
-
-[9] w3schools, "How To - CSS Images Side by Side," w3schools, *Dostupné:* https://www.w3schools.com/howto/howto_css_images_side_by_side.asp.
-
-[10] w3schools, "How To - CSS Image Center," w3schools, [Online]. *Dostupné:* https://www.w3schools.com/howto/howto_css_image_center.asp.
-
-[11] Stack Overflow, "How can I make a CSS table fit the screen width?," Stack Overflow, *Dostupné:* https://stackoverflow.com/questions/4237110/how-can-i-make-a-css-table-fit-the-screen-width.
-
-[12] Stack Overflow, "Expand or shrink depending on the screen size using CSS," Stack Overflow, *Dostupné:* https://stackoverflow.com/questions/889357/expand-or-shrink-depending-on-the-screen-size-using-css.
-
-[13] Stack Overflow, "How do I replace all my NULL values in a particular field in a particular table?," Stack Overflow, *Dostupné:* https://stackoverflow.com/questions/4629202/how-do-i-replace-all-my-null-values-in-a-particular-field-in-a-particular-table.
-
-[14] GeeksforGeeks, "How to upload image into database and display it using PHP?," GeeksforGeeks, *Dostupné:* https://www.geeksforgeeks.org/how-to-upload-image-into-database-and-display-it-using-php/.
-
-[15] SheCodes, "How to make all images on a page the same size in HTML and CSS," SheCodes, *Dostupné:* https://www.shecodes.io/athena/25432-how-to-make-all-images-on-a-page-the-same-size-in-html-and-css.
-
-[16] Stack Overflow, "How to skip duplicate data in foreach loop?," Stack Overflow, *Dostupné:* https://stackoverflow.com/questions/67889461/how-to-skip-duplicate-data-in-foreach-loop.
-
-[17] Stack Overflow, "Get the count of the MySQL query results in PHP," Stack Overflow, *Dostupné:* https://stackoverflow.com/questions/34145367/get-the-count-of-the-mysql-query-results-in-php.
-
-[18] Stack Overflow, "Submit a form with a drop-down list doesn't work," Stack Overflow, *Dostupné:* https://stackoverflow.com/questions/14769505/submit-a-form-with-a-drop-down-list-doesnt-work.
-
-[19] Reddit, "Why my path after upload image always store in /tmp?," Reddit, *Dostupné:* https://www.reddit.com/r/laravel/comments/slgbh7/why_my_path_after_upload_image_always_store_in/.
