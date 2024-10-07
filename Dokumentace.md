@@ -120,14 +120,15 @@ _Karla Šoustková_
 
 __1. 'Home'__
 
+> Hlavní kontroler
+
 ```__construct()```: Nastaví modely pro závody (rModel), etapy (sModel), místa (lModel), jezdce (rdModel), výsledky (reModel), roky (ryModel) a země (cModel). Také vytváří instanci konfigurační třídy ConfModel.
 
 ```initController()```: Nahrazuje základní nastavení kontroleru a nastavuje knihovnu _IonAuth_ pro přihlašování uživatelů.
 
 __Hlavní stránky__:
 
-```index():``` Načte kočky z databáze a zobrazí je na stránce. Nastaví stránkování, titulek stránky a stav přihlášení.
-Načítá seznam závodů z databáze a zobrazí je na úvodní stránce. Nastavuje stránkování, titulek stránky, přihlášení uživatele a administrátorský přístup.
+```index():``` Načítá seznam závodů z databáze a zobrazí je na úvodní stránce. Nastavuje stránkování, titulek stránky, přihlášení uživatele a administrátorský přístup.
 
 ```year():``` Načítá roky závodů a zobrazuje je na stránce. Spojuje data z tabulek race_year, race a uci_tour_type, nastavuje stránkování a titulek stránky.
 
@@ -143,35 +144,35 @@ Načítá seznam závodů z databáze a zobrazí je na úvodní stránce. Nastav
 
 -----------------------------------
 
-```adoptionInfoPage():``` Získá hodnotu perpage (kolik položek se má zobrazit na jedné stránce). Spojuje tabulky, aby získala informace o kočkách, jejich majitelích a městech.
-Načítá tyto informace s omezením na počet položek na stránku (perpage). Zobrazí stránku AdoptionInfoPage s připravenými daty.
+__Editace__:
 
-```addCat():``` Načte data potřebná pro formulář pro přidání nové kočky, jako jsou plemena a status. Zobrazí formulář.
+```devpage():``` Načítá seznam závodů z databáze a zobrazuje je na stránce pro vývojáře (adminy). Kontroluje, zda je uživatel přihlášen a zda je administrátorem.
 
-```createForm():``` Zpracuje formulář pro přidání nové kočky. Uloží data nové kočky do databáze a zobrazí zprávu o úspěšném vytvoření.
+```updateRace($id):``` Načítá podrobnosti konkrétního závodu podle zadaného ID a zobrazuje stránku pro úpravu závodu.
 
-```showAll():``` Zobrazuje všechny kočky z databáze na jedné stránce.
+```updateForm():``` Zpracovává formulář pro aktualizaci závodu. Ukládá změněné údaje do databáze a nastavuje zprávu o úspěšné aktualizaci. Přesměruje zpět na stránku s vývojovými závody.
 
-```editCat($id):``` Získá informace o konkrétní kočce z databáze podle jejího ID a uloží je do proměnné $data['array']. Získá seznam všech plemen a uloží je do proměnné $data['list']. Získá zprávu ze 'session' a uloží ji do proměnné $data['message']. Zkontroluje, zda je uživatel přihlášen, a uloží výsledek do proměnné $data['logged']. Vrátí 'view' pro úpravu kočky s danými daty.
+__Vytvoření závodu__:
 
-```editForm():``` Zpracuje formulář pro editaci kočky. Uloží změny do databáze a nastaví zprávu o úspěšné editaci. Získá hodnoty z formuláře zaslaného metodou POST. Kontroluje, zda je nahraná fotografie platná a zda již nebyla přesunuta. _Pokud je platná:_
-- Vygeneruje náhodné jméno pro fotografii.
-- Přesune fotografii do složky public/assets/kocky s novým názvem.
-- Pokud fotografie není platná nebo se již přesunula, nastaví výchozí jméno fotografie na 'default.png' a přesune ji do složky public/assets/kocky.
+```addNew():``` Načítá seznam závodů z databáze a zobrazuje formulář pro přidání nového závodu. Zobrazí také stav přihlášení.
 
-```confirmDelete($id):``` Načte data konkrétní kočky podle zadaného ID a zobrazuje stránku DeleteCat pro potvrzení smazání. 	
+```createForm():``` Zpracovává formulář pro vytvoření nového závodu. Ukládá nové údaje o závodu do databáze a zobrazuje zprávu o úspěšném vytvoření.
 
-```deleteForm():``` Zpracuje formulář pro smazání kočky. Smaže kočku z databáze a zobrazí zprávu o úspěšném smazání.
+__Smazání závodu__:
+
+```confirmDelete($id):``` Načítá podrobnosti o konkrétním závodu podle zadaného ID a zobrazuje stránku pro potvrzení smazání závodu.
+
+```deleteForm():``` Zpracovává formulář pro smazání závodu. Smaže závod z databáze a nastavuje zprávu o úspěšném smazání.
 
 __Proměnné__:
 
-```$kModel, $pModel, $fModel, $oModel, $sModel:``` Instance modelu pro správu dat o kočkách, plemenech, fotografiích, majitelích a statusech
+```$rModel, $sModel, $lModel, $rdModel, $reModel, $ryModel, $cModel:``` Instance modelů pro správu dat o závodech, etapách, místech, jezdcích, výsledcích, ročnících závodů a zemích.
 
-```$config:```  Vytváří novou instanci konfigurační třídy CModel pro nastavení různých parametrů.
+```$config:``` Instance konfigurační třídy ConfModel -> spravuje konfigurační nastavení, jako je například počet položek na stránce (perpage).
 
-```$ionAuth:``` Instance knihovny IonAuth pro autentizaci uživatelů.
+```$ionAuth:``` Instance knihovny IonAuth pro autorizaci uživatelů.
 
-```$session:``` Objekt session pro práci se session daty (Např. nastavení flash dat -dočasná data uložená v relaci)
+```$session:``` Objekt session pro práci se session daty (např. nastavení flash dat - dočasná data uložená v relaci).
 
 __2. 'Auth'__
 
