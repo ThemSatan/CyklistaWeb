@@ -1,1 +1,1 @@
-Dokumentace.md
+Gnosticky projekt
