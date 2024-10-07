@@ -101,8 +101,7 @@ __Licence knihovny:__ MIT License
 
 ## Rozdělení práce - upravit !!!
 
-_Klára Adámková_
--	Založení projektu
+_Klára Adámková_ (doplnit)
 -	Tabulky - editace
 -	Přihlášení a registrace
 -	Vzhledové upravení webu (CSS) a stránkování
@@ -111,7 +110,7 @@ _Klára Adámková_
 
 _Karla Šoustková_
 -	Dokumentace
--	Vlajky
+-	Vlajky (název knihovny)
 -	Tabulky - přidávání, mazání, soft deletes
 -	Zobrazení - karty
 -	Modální okno a alerty
@@ -119,25 +118,30 @@ _Karla Šoustková_
 ## Popis jednotlivých metod a proměnných - upravit !!!
 ### Kontrolery
 
-__1. 'MainController'__
+__1. 'Home'__
 
-```__construct()```: Nastaví modely pro kočky (kModel), plemena (pModel), fotografie (fModel), majitele (oModel), statusy (sModel) a konfiguraci (CModel).
+```__construct()```: Nastaví modely pro závody (rModel), etapy (sModel), místa (lModel), jezdce (rdModel), výsledky (reModel), roky (ryModel) a země (cModel). Také vytváří instanci konfigurační třídy ConfModel.
 
 ```initController()```: Nahrazuje základní nastavení kontroleru a nastavuje knihovnu _IonAuth_ pro přihlašování uživatelů.
 
 __Hlavní stránky__:
 
-```catsPage():``` Načte kočky z databáze a zobrazí je na stránce. Nastaví stránkování, titulek stránky a stav přihlášení.
+```index():``` Načte kočky z databáze a zobrazí je na stránce. Nastaví stránkování, titulek stránky a stav přihlášení.
+Načítá seznam závodů z databáze a zobrazí je na úvodní stránce. Nastavuje stránkování, titulek stránky, přihlášení uživatele a administrátorský přístup.
 
-```catsAdoptPage():``` Načte adoptované kočky z databáze a zobrazí je na stránce. Stejně jako catsPage nastaví potřebná data pro zobrazení.
+```year():``` Načítá roky závodů a zobrazuje je na stránce. Spojuje data z tabulek race_year, race a uci_tour_type, nastavuje stránkování a titulek stránky.
 
-```catsUnavPage():``` Načte kočky, _které nejsou k dispozici_ a zobrazuje je na stránce. Nastaví data pro zobrazení včetně statusu koček.
+```result():``` Načítá výsledky závodů, včetně jmen jezdců, kteří se těchto závodů účastnili. Nastavuje opět data pro zobrazení.
 
-```catsAvPage():``` Stejné jako catsUnavPage() ale jen pro _dostupné kočky k adopci_.
+```stage($id):``` Načítá podrobnosti konkrétní etapy podle zadaného ID. Spojuje data z tabulek stage, parcour_type a race_year. Zobrazuje podrobnosti o etapě na stránce.
 
-```catsSinglePage($id):``` Načte informace o konkrétní kočce podle zadaného ID. Zobrazuje informace o kočce a jejím majiteli.
+```graph():``` Zobrazuje stránku grafů a statistik. Nastavuje opět data pro zobrazení.
 
-------------
+```riders():``` Načítá seznam jezdců z databáze a zobrazí je na stránce. Nastavuje data pro zobrazení.
+
+```riderInfo($id):``` Načítá podrobnosti o konkrétním jezdci podle zadaného ID a spojuje data z tabulky rider s tabulkou location pro zobrazení místa narození.
+
+-----------------------------------
 
 ```adoptionInfoPage():``` Získá hodnotu perpage (kolik položek se má zobrazit na jedné stránce). Spojuje tabulky, aby získala informace o kočkách, jejich majitelích a městech.
 Načítá tyto informace s omezením na počet položek na stránku (perpage). Zobrazí stránku AdoptionInfoPage s připravenými daty.
