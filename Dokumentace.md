@@ -100,7 +100,7 @@ __Autor knihovny:__ Abdullah Almsaeed
 
 __Licence knihovny:__ MIT License
 
-### __[IonAuth]([https://github.com/ColorlibHQ/AdminLTE)](https://github.com/benedmunds/CodeIgniter-Ion-Auth)__
+### __[IonAuth](https://github.com/benedmunds/CodeIgniter-Ion-Auth)__
 __Název knihovny:__ benedmunds/codeigniter-ion-auth
 
 __Verze knihovny:__ 4.0.0
