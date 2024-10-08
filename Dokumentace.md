@@ -54,14 +54,7 @@ Popis názvů tabulek, sloupců a ID
 > Např. MainPage | Cyclist | Auth
 
 
-### Popis názvu obrázků __(???) -> dodělat__
-- Anglicky
-- Oddělení dvou (a více) slovných názvů pomocí velkého písmena na začátku dalšího slova, bez mezery
-- Na začátku malé písmeno
-> Např. cyclist.jpg
-
-
-## Externí nástroje
+## Externí nástroje - knihovny
 
 ### __[Bootstrap](https://getbootstrap.com)__
 
@@ -99,24 +92,24 @@ __Autor knihovny:__ Nils Adermann, Jordi Boggiano
 __Licence knihovny:__ MIT License
 
 
-## Rozdělení práce - upravit !!!
+## Rozdělení práce
 
-_Klára Adámková_ (doplnit)
+_Klára Adámková_
 -	Tabulky - editace
 -	Přihlášení a registrace
 -	Vzhledové upravení webu (CSS) a stránkování
 -	Dropdown
--	Agregační funkce a SQL Joins
+-	Vlajky
+-	Generování PDF
 
 _Karla Šoustková_
 -	Dokumentace
--	Vlajky (název knihovny)
-- Grafy
--	Tabulky - přidávání, mazání, soft deletes
--	Zobrazení - karty
--	Modální okno a alerty
+-	Grafy
+- WYSIWYG editor
+-	Tabulky - přidávání, mazání
+-	Zobrazení - karty (rozvržení)
 
-## Popis jednotlivých metod a proměnných - upravit !!!
+## Popis jednotlivých metod a proměnných
 ### Kontrolery
 
 __1. 'Home'__
@@ -204,7 +197,7 @@ __Proměnné:__
 
 
 
-## Zdroje - UPRAVIT!!!
+## Zdroje
 
 > Z těchto zdrojů jsme čerpaly informace a data pro náš web
 
