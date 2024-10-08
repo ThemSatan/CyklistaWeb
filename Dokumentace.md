@@ -91,6 +91,116 @@ __Autor knihovny:__ Nils Adermann, Jordi Boggiano
 
 __Licence knihovny:__ MIT License
 
+### __[AdminLTE](https://github.com/ColorlibHQ/AdminLTE)__
+__Název knihovny:__ almasaeed2010/adminlte
+
+__Verze knihovny:__ 3.2.0
+
+__Autor knihovny:__ Abdullah Almsaeed
+
+__Licence knihovny:__ MIT License
+
+### __[IonAuth]([https://github.com/ColorlibHQ/AdminLTE)](https://github.com/benedmunds/CodeIgniter-Ion-Auth)__
+__Název knihovny:__ benedmunds/codeigniter-ion-auth
+
+__Verze knihovny:__ 4.0.0
+
+__Autor knihovny:__ Ben Edmunds
+
+__Licence knihovny:__ MIT License
+
+### __[dompdf](https://github.com/dompdf/dompdf)__
+__Název knihovny:__ dompdf/dompdf
+
+__Verze knihovny:__ 2.0.3
+
+__Autor knihovny:__ Benj Carson, Dominic Sayers
+
+__Licence knihovny:__ LGPL-2.1-only
+
+### __[Faker](https://github.com/FakerPHP/Faker)__
+__Název knihovny:__ fakerphp/faker
+
+__Verze knihovny:__ 1.22.0
+
+__Autor knihovny:__ François Zaninotto, FakerPHP contributors
+
+__Licence knihovny:__ MIT License
+
+### __[laminas-http](https://github.com/laminas/laminas-http)__
+__Název knihovny:__ laminas/laminas-http
+
+__Verze knihovny:__ 2.15.0
+
+__Autor knihovny:__ Laminas Project contributors
+
+__Licence knihovny:__ BSD-3-Clause License
+
+### __[sebastian/version](https://github.com/sebastianbergmann/version)__
+__Název knihovny:__ sebastian/version
+
+__Verze knihovny:__ 3.0.2
+
+__Autor knihovny:__ Sebastian Bergmann
+
+__Licence knihovny:__ BSD-3-Clause License
+
+### __[http-foundation](https://github.com/symfony/http-foundation)__
+__Název knihovny:__ symfony/http-foundation
+
+__Verze knihovny:__ 6.3.4
+
+__Autor knihovny:__ Symfony Community
+
+__Licence knihovny:__ MIT License
+
+### __[tokenizer](https://github.com/theseer/tokenizer)__
+__Název knihovny:__ theseer/tokenizer
+
+__Verze knihovny:__ 1.2.1
+
+__Autor knihovny:__ Arne Blankerts
+
+__Licence knihovny:__ BSD-3-Clause License
+
+### __[twbs/bootstrap](https://github.com/twbs/bootstrap)__
+__Název knihovny:__ theseer/tokenizer
+
+__Verze knihovny:__ 5.3.2
+
+__Autor knihovny:__ Twitter, Inc.
+
+__Licence knihovny:__ MIT License
+
+### __[php-css-parser](https://github.com/sabberworm/PHP-CSS-Parser)__
+__Název knihovny:__ sabberworm/php-css-parser
+
+__Verze knihovny:__ 8.4.0
+
+__Autor knihovny:__ Sabberworm
+
+__Licence knihovny:__ MIT License
+
+### __[psr/log](https://github.com/php-fig/log)__
+__Název knihovny:__ psr/log
+
+__Verze knihovny:__ 3.0.0
+
+__Autor knihovny:__  PHP-FIG
+
+__Licence knihovny:__ MIT License
+
+### __[phar-io/version](https://github.com/phar-io/version)__
+__Název knihovny:__ phar-io/version
+
+__Verze knihovny:__ 3.2.1
+
+__Autor knihovny:__ Arne Blankerts
+
+__Licence knihovny:__ BSD-3-Clause License
+
+### __[Dále]__
+__Název knihoven:__ nikic/fast-route; myclabs/deep-copy; mikey179/vfsstream; masterminds/html5
 
 ## Rozdělení práce
 
